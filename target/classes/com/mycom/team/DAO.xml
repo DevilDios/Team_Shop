@@ -5,8 +5,10 @@
 
 <mapper namespace="com.mycom.team.Service"> 
 
-<!-- 회원가입 해야함 -->
 
+<insert id="insert">
+ insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
+</insert>
 
 
 
