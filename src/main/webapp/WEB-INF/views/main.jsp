@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+h1{
+text-align: center;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
