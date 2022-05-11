@@ -18,8 +18,13 @@ text-align: left;
 <header>
    <nav>
      <div>
-        <a href="#"> 로그인 </a>&emsp;
+
+        
         <a href="memberinput"> 회원가입 </a>&emsp;
+
+        <a href="login"> 로그인 </a>&emsp;
+        <a href="#"> 회원가입 </a>&emsp;
+
         <a href="#"> 주문조회 </a>&emsp;
         <a href="#"> 관리자  </a>&emsp;    
      </div>
@@ -32,7 +37,6 @@ text-align: left;
              <a href="#"> Outer </a> &emsp;      
                  <a href="#"> Top </a>&emsp;
                    <a href="#"> Bottom </a>&emsp;
-                            
      </ul>
    </nav>
 <hr>

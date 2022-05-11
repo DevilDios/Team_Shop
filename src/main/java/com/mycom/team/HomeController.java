@@ -33,7 +33,6 @@ public class HomeController {
 	{
 		return "member_input";
 	}
-	
 	//회원가입완료
 	@RequestMapping(value = "/membersave")
 	public String membersave(HttpServletRequest request,Model mo)
@@ -49,6 +48,13 @@ public class HomeController {
 		dao.insert(id,pw,name,tel,email,address);
 		
 		return "redirect:index";
+	}
+	//로그인폼
+	@RequestMapping(value = "/login")
+	public String login()
+	{
+		return "login";
+
 	}
 	
 }

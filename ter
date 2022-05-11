@@ -1,0 +1,150 @@
+[33mcommit fc19d0e546e03364ef8ae9d207c56debb96e1cc5[m[33m ([m[1;36mHEAD -> [m[1;32mseok[m[33m, [m[1;31morigin/seok[m[33m)[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 15:02:17 2022 +0900
+
+    seok memberinput
+
+[33mcommit 51b389d35b0730bae31ef74bd12711c544ea200b[m
+Merge: f873064 8e22fa2
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:33:38 2022 +0900
+
+    Merge pull request #9 from DevilDios/blossom
+    
+    blossom 5 commit
+
+[33mcommit 8e22fa239678365e15c7792f6aa6b8729c4486da[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 13:33:06 2022 +0900
+
+    blossom 5 commit
+
+[33mcommit f8730648468bbb7949e37d203677f95b7d8d7aff[m
+Merge: 57c7889 666d64b
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:26:16 2022 +0900
+
+    Merge pull request #8 from DevilDios/blossom
+    
+    blossom 4 commit
+
+[33mcommit 666d64b30d8e2517ea027aacc91474b2edf896ba[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 13:25:33 2022 +0900
+
+    blossom 4 commit
+
+[33mcommit 57c788952d1e67f67f82305140a8d24c148e98f4[m
+Merge: 2c25f14 a1f4f7b
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:06:01 2022 +0900
+
+    Merge pull request #7 from DevilDios/blossom
+    
+    blossom second commit
+
+[33mcommit a1f4f7bdf4ee8036568ced70c5210aba316b0b49[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 13:05:12 2022 +0900
+
+    blossom second commit
+
+[33mcommit 2c25f14280460ded043e8cee7848579553442790[m
+Merge: 51df088 8824aba
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:01:22 2022 +0900
+
+    Merge pull request #6 from DevilDios/seok
+    
+    seok header
+
+[33mcommit 8824aba4cd0e057483d1a10d04eb24a8c8c5dcb0[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:59:19 2022 +0900
+
+    seok header
+
+[33mcommit 51df088ac588560e14e9e3727ca3482db17c1c67[m
+Merge: 289290b 3dfc6dd
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:39:02 2022 +0900
+
+    Merge pull request #5 from DevilDios/blossom
+    
+    blossom therd commit
+
+[33mcommit 3dfc6dd1f20a3b30305f7830dd73cddea060eecd[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 12:38:31 2022 +0900
+
+    blossom therd commit
+
+[33mcommit 289290b4e4f99840582bc31d72c5f1a5865a477f[m
+Merge: 96bab13 e7d3526
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:36:11 2022 +0900
+
+    Merge pull request #4 from DevilDios/blossom
+    
+    blossom second commit
+
+[33mcommit e7d35265748c23859e33a6b19b1a845939a1f53d[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 12:35:18 2022 +0900
+
+    blossom second commit
+
+[33mcommit 96bab130d0fce955a177c5c2d13ea7c0b6373177[m
+Merge: 5baa00a 99b4b14
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:32:07 2022 +0900
+
+    Merge pull request #3 from DevilDios/seok
+    
+    Seok
+
+[33mcommit 99b4b141b1e7d55b45440d4ccef4299e8de44b2c[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:29:15 2022 +0900
+
+    seokiiii
+
+[33mcommit 5bd374a6bcb47ac0b7ddcbc707b095c8ef20abef[m
+Merge: 7e74d2a 5baa00a
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:26:11 2022 +0900
+
+    Merge branch 'master' of https://github.com/DevilDios/Team_Shop into seok
+
+[33mcommit 5baa00a22e932706e0cfc05e7cc39c7889b02b01[m
+Merge: 65d5994 7427601
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:25:48 2022 +0900
+
+    Merge pull request #2 from DevilDios/blossom
+    
+    blossom first commit
+
+[33mcommit 7427601a43616026c58d7670c2a67d24b4d277f5[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 12:25:05 2022 +0900
+
+    blossom first commit
+
+[33mcommit 7e74d2a16672a8c65b730069b3ae7fa75b8684d4[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:17:05 2022 +0900
+
+    seok firts
+
+[33mcommit 6d767d20b96ba1daaa4f933007d551d47329e62c[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:03:44 2022 +0900
+
+    seok-first
+
+[33mcommit 65d599451d0298edc2fa488a420772cc7474dd2d[m[33m ([m[1;32mmaster[m[33m)[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 03:53:29 2022 +0900
+
+    master first commit
