@@ -36,6 +36,7 @@ text-align: left;
      </ul>
    </nav>
 <hr>
+<br>
 </header>
 </body>
 </html>
