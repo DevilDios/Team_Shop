@@ -16,7 +16,7 @@ text-align: center;
 <form action="membersave" method="post">
 <table border="1" width="300" align="center">
 <tr><th>ID</th><td><input type="text" name="id"> </td></tr>
-<tr><th>PW</th><td><input type="text" name="pw"> </td></tr>
+<tr><th>PW</th><td><input type="password" name="pw"> </td></tr>
 <tr><th>이름</th><td><input type="text" name="name"> </td></tr>
 <tr><th>전화</th><td><input type="text" name="tel"> </td></tr>
 <tr><th>이메일</th><td><input type="text" name="email"> </td></tr>
