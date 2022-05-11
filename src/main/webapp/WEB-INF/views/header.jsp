@@ -24,6 +24,7 @@ text-align: left;
         <a href="#"> 고객센터  </a>&emsp;    
      </div>
    </nav>
+<hr>
     <nav>
      <ul class="log_box">
         <a href="#"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
@@ -34,6 +35,7 @@ text-align: left;
                             
      </ul>
    </nav>
+<hr>
 </header>
 </body>
 </html>
