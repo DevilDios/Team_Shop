@@ -12,7 +12,6 @@
 
 	<a href="#">상품 등록</a> &emsp;&emsp;&emsp;
 	<a href="#">상품 관리</a> &emsp;&emsp;&emsp;
-	<a href="#">상품 등록</a> &emsp;&emsp;&emsp;
 	<a href="#">매출액</a>	 &emsp;&emsp;&emsp;
 	<a href="#">회원관리</a> &emsp;&emsp;&emsp;
 	<a href="index">홈으로</a>
