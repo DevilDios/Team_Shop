@@ -27,6 +27,17 @@
 		<put-attribute name="title" value="로그인"/>
 		<put-attribute name="content" value="/WEB-INF/views/login.jsp" />
 	</definition>
+	
+	<definition name="managerform" extends="baseLayout">   
+		<put-attribute name="title" value="관리자"/>
+		<put-attribute name="header" value="/WEB-INF/views/managerform.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/managermain.jsp" />
+	</definition>	
+
+
+
+
+
 
 
 </tiles-definitions>
