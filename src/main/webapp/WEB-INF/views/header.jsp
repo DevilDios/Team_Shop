@@ -19,15 +19,15 @@ text-align: left;
    <nav>
      <div>
         <a href="#"> 로그인 </a>&emsp;
-        <a href="#"> 회원가입 </a>&emsp;
+        <a href="memberinput"> 회원가입 </a>&emsp;
         <a href="#"> 주문조회 </a>&emsp;
-        <a href="#"> 고객센터  </a>&emsp;    
+        <a href="#"> 관리자  </a>&emsp;    
      </div>
    </nav>
 <hr>
     <nav>
      <ul class="log_box">
-        <a href="#"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+        <a href="index"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
             <a href="#"> Best </a> &emsp; 
              <a href="#"> Outer </a> &emsp;      
                  <a href="#"> Top </a>&emsp;

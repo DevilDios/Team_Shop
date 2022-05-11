@@ -17,7 +17,10 @@
 		<put-attribute name="title" value="메인"/>
 		<put-attribute name="content" value="/WEB-INF/views/main.jsp" />
 	</definition>
-	
+	<definition name="member_input" extends="baseLayout">   
+		<put-attribute name="title" value="회원가입"/>
+		<put-attribute name="content" value="/WEB-INF/views/member_input.jsp" />
+	</definition>
 
 
 </tiles-definitions>
