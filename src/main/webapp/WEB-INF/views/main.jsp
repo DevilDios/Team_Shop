@@ -12,6 +12,8 @@ text-align: center;
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Main</h1>
+<div style="text-align: center;">
+<img src="${pageContext.request.contextPath}/image/m-404.jpeg" width="400">
+</div>
 </body>
 </html>
