@@ -54,7 +54,15 @@ public class HomeController {
 	public String login()
 	{
 		return "login";
-
 	}
+	
+	@RequestMapping(value = "/manager")
+	public String manager()
+	{
+		return "managerform";
+	}
+	
+	
+	
 	
 }

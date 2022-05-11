@@ -23,7 +23,7 @@ text-align: left;
         <a href="memberinput"> 회원가입 </a>&emsp;
         <a href="login"> 로그인 </a>&emsp;        
         <a href="#"> 주문조회 </a>&emsp;
-        <a href="#"> 관리자  </a>&emsp;    
+        <a href="manager"> 관리자  </a>&emsp;    
      </div>
    </nav>
 <hr>
