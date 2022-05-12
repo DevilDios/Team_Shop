@@ -7,12 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1 style="text-align: center;"> 환영합니다! ${loginmember.name}님! </h1>
 
-<form action="#" align="center">
-아이디 <input type="text" name="id"><br>
-비밀번호 <input type="text" name="pw"><br>
-<input type="button" value="reset"> &emsp;
-<input type="button" value="login">
+<form action="index" align="center">
+	<input type="submit" value="확인">
 </form>
 
 </body>

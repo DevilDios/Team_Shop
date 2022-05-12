@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,11 +20,33 @@ text-align: left;
    <nav>
      <div>
 
+ 
+	<c:choose>
+		<c:when test="${islogon == true && loginmember != null && loginmember.id eq 'master'}">
+			<a href="user_modify_form">< ${loginmember.name} 님 ></a> &emsp; 
+			<a href="logout">로그아웃</a>	&emsp;
+			<a href="managerindex"> 관리자 </a>&emsp;  
+		</c:when>
+		<c:when test="${islogon == true && loginmember != null}">
+			<a href="user_modify_form">< ${loginmember.name} 님 ></a> &emsp; 
+			<a href="logout">로그아웃</a>	&emsp;
+			<a href="#"> 주문조회 </a>&emsp;
+			<a href="#"> 장바구니 </a>&emsp;
+		</c:when>
+		<c:otherwise>
+	        <a href="loginform"> 로그인 </a>&emsp;    
+	        <a href="memberinput"> 회원가입 </a>&emsp;
+	        <a href="loginform"> 주문조회 </a>&emsp;
+			<a href="loginform"> 장바구니 </a>&emsp;
+		</c:otherwise>
+	</c:choose>        
+	
+
+
+		
+		  
         
-        <a href="memberinput"> 회원가입 </a>&emsp;
-        <a href="login"> 로그인 </a>&emsp;        
-        <a href="#"> 주문조회 </a>&emsp;
-        <a href="manager"> 관리자  </a>&emsp;    
+  
      </div>
    </nav>
 <hr>
