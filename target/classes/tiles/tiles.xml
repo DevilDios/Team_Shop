@@ -32,9 +32,17 @@
 		<put-attribute name="title" value="관리자"/>
 		<put-attribute name="header" value="/WEB-INF/views/managerheader.jsp" />
 		<put-attribute name="content" value="/WEB-INF/views/managermain.jsp" />
-	</definition>	
+	</definition>
+		
+	<definition name="sang_list" extends="baseLayout">   
+		<put-attribute name="title" value="상품리스트"/>
+		<put-attribute name="content" value="/WEB-INF/views/sang_list.jsp" />
+	</definition>
 	
-	
+	<definition name="sang_detail" extends="baseLayout">   
+		<put-attribute name="title" value="상품디테일"/>
+		<put-attribute name="content" value="/WEB-INF/views/sang_detail.jsp" />
+	</definition>
 
 
 
