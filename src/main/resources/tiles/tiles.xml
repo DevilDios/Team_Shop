@@ -29,19 +29,19 @@
 	</definition>
 	
 	<definition name="managerindex" extends="baseLayout">   
-		<put-attribute name="title" value="관리자"/>
+		<put-attribute name="title" value="관리자 메인"/>
 		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
 		<put-attribute name="content" value="/WEB-INF/views/manager_main.jsp" />
 	</definition>	
 	
 	<definition name="manager_memlist" extends="baseLayout">   
-		<put-attribute name="title" value="회원관리"/>
+		<put-attribute name="title" value="관리자 회원관리"/>
 		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
 		<put-attribute name="content" value="/WEB-INF/views/manager_memlist.jsp" />
 	</definition>
 
 	<definition name="manager_memmodify_form" extends="baseLayout">   
-		<put-attribute name="title" value="회원정보수정"/>
+		<put-attribute name="title" value="관리자 회원정보수정"/>
 		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
 		<put-attribute name="content" value="/WEB-INF/views/manager_memmodify_form.jsp" />
 	</definition>
@@ -52,11 +52,19 @@
 	</definition>
 	
 	<definition name="user_modify_form" extends="baseLayout">   
-		<put-attribute name="title" value="로그인 성공"/>
+		<put-attribute name="title" value="유저 회원 정보 수정"/>
 		<put-attribute name="content" value="/WEB-INF/views/user_modify_form.jsp" />
 	</definition>	
+		
+	<definition name="sang_list" extends="baseLayout">   
+		<put-attribute name="title" value="상품리스트"/>
+		<put-attribute name="content" value="/WEB-INF/views/sang_list.jsp" />
+	</definition>
 	
-	
+	<definition name="sang_detail" extends="baseLayout">   
+		<put-attribute name="title" value="상품디테일"/>
+		<put-attribute name="content" value="/WEB-INF/views/sang_detail.jsp" />
+	</definition>
 
 
 

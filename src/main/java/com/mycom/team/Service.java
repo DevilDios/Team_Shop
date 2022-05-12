@@ -17,4 +17,10 @@ public interface Service {
 
    
 
+
+   /*
+   public ArrayList<SangDTO> out();
+   public ArrayList<SangDTO> detail(String gifttitle);  
+   */
+
 }
