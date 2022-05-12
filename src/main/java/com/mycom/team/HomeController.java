@@ -106,6 +106,7 @@ public class HomeController {
 		return "manager_memlist"; 
 	}
 	
+
 	//관리자-회원정보수정폼
 	@RequestMapping(value = "/manager_memmodify_form")
 	public String member_modify(HttpServletRequest request, Model model)
@@ -116,6 +117,37 @@ public class HomeController {
 		model.addAttribute("dto", dto);
 		return "manager_memmodify_form";
 	}
+
+	
+	@RequestMapping(value = "/gift_input")
+	public String gift_input()
+	{
+		return "gift_input";
+	}
+	
+	//상품 등록
+	@RequestMapping(value = "/giftsave")
+	public String giftsave(HttpServletRequest request,Model mo)
+	{
+		Service dao = sqlSession.getMapper(Service.class);
+		String giftnum = request.getParameter("giftnum");
+		String gifttitle = request.getParameter("gifttitle");
+		String giftpart = request.getParameter("giftpart");
+		String giftimg = request.getParameter("giftimg");
+		String giftprice = request.getParameter("giftprice");
+		String giftstocks = request.getParameter("giftstocks");
+		String giftstockm = request.getParameter("giftstockm");
+		String giftstockl = request.getParameter("giftstockl");		
+		String giftstockxl = request.getParameter("giftstockxl");
+		String gifttumimg = request.getParameter("gifttumimg");
+		
+		dao.giftinsert(giftnum, gifttitle, giftpart, giftimg, giftprice, giftstocks, giftstockm, giftstockl, giftstockxl, gifttumimg);
+
+		return "redirect:index";
+	}
+	
+	
+
 	
 	//관리자-회원정보수정
 	@RequestMapping(value = "/manager_memmodify_update")

@@ -33,7 +33,7 @@
 		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
 		<put-attribute name="content" value="/WEB-INF/views/manager_main.jsp" />
 	</definition>	
-	
+
 	<definition name="manager_memlist" extends="baseLayout">   
 		<put-attribute name="title" value="관리자 회원관리"/>
 		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
@@ -50,7 +50,12 @@
 		<put-attribute name="title" value="로그인 성공"/>
 		<put-attribute name="content" value="/WEB-INF/views/login_succeed.jsp" />
 	</definition>
-	
+
+	<definition name="gift_input" extends="baseLayout">   
+		<put-attribute name="title" value="상품등록"/>
+		<put-attribute name="content" value="/WEB-INF/views/gift_input.jsp" />
+	</definition>	
+
 	<definition name="user_modify_form" extends="baseLayout">   
 		<put-attribute name="title" value="유저 회원 정보 수정"/>
 		<put-attribute name="content" value="/WEB-INF/views/user_modify_form.jsp" />

@@ -10,6 +10,7 @@
  insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
 </insert>
 
+
 <select id="getMemSelectAll" resultType="com.mycom.team.Member_DTO">
 	select * from member
 </select>
@@ -37,6 +38,10 @@
 <delete id="userDelete">
 	delete from member where id=#{param1}
 </delete>
+
+<insert id="giftinsert">
+ insert into gift values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
+</insert>
 
 
 </mapper>
