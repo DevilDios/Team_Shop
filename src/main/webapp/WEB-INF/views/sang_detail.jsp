@@ -65,7 +65,7 @@ function changeitem() {
 }
 
 </script> 
-  <table border="0" width="800" align="center" >        
+  <table border="0" width="900" align="center" >        
       <tr> <td rowspan="9"><img  src="./image/m-404.jpeg" width="300" height="400">  </td></tr>
         
        <tr><th>상품제목</th><td>아이유 옷</td></tr>
