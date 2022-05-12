@@ -60,12 +60,12 @@ function changeitem() {
 
 	alert(test+"사이즈 추가합니다");
 	
-	$("#appenditem").append(test+"사이즈 99990원");
+	$("#appenditem").append("<li>"+test+"</li>");
 
 }
 
 </script> 
-  <table border="0" width="700" align="center" >        
+  <table border="0" width="800" align="center" >        
       <tr> <td rowspan="9"><img  src="./image/m-404.jpeg" width="300" height="400">  </td></tr>
         
        <tr><th>상품제목</th><td>아이유 옷</td></tr>
@@ -105,8 +105,6 @@ function changeitem() {
                 <input type="button" value="장바구니" onclick="location.href='#'">
                 <input type="button" value="바로구매" onclick="location.href='#'">
             </td></tr>
-     
-    
 
     
   </table>
