@@ -34,6 +34,11 @@
 		<put-attribute name="content" value="/WEB-INF/views/managermain.jsp" />
 	</definition>	
 	
+	<definition name="gift_input" extends="baseLayout">   
+		<put-attribute name="title" value="상품등록"/>
+		<put-attribute name="content" value="/WEB-INF/views/gift_input.jsp" />
+	</definition>	
+	
 	
 
 
