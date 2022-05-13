@@ -2,14 +2,34 @@ package com.mycom.team;
 
 public class Gift_DTO {
 
-	
-	String giftnum,gifttitle,giftpart,giftimg,giftprice,giftstocks,giftstockm,giftstockl,giftstockxl,gifttumimg;
+	int giftnum;
+	String gifttitle,giftpart,giftimg,giftprice,giftstocks,giftstockm,giftstockl,giftstockxl,gifttumimg;
 
-	public String getGiftnum() {
+	public Gift_DTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Gift_DTO(int giftnum, String gifttitle, String giftpart, String giftimg, String giftprice, String giftstocks,
+			String giftstockm, String giftstockl, String giftstockxl, String gifttumimg) {
+		super();
+		this.giftnum = giftnum;
+		this.gifttitle = gifttitle;
+		this.giftpart = giftpart;
+		this.giftimg = giftimg;
+		this.giftprice = giftprice;
+		this.giftstocks = giftstocks;
+		this.giftstockm = giftstockm;
+		this.giftstockl = giftstockl;
+		this.giftstockxl = giftstockxl;
+		this.gifttumimg = gifttumimg;
+	}
+
+	public int getGiftnum() {
 		return giftnum;
 	}
 
-	public void setGiftnum(String giftnum) {
+	public void setGiftnum(int giftnum) {
 		this.giftnum = giftnum;
 	}
 
@@ -85,20 +105,7 @@ public class Gift_DTO {
 		this.gifttumimg = gifttumimg;
 	}
 
-	public Gift_DTO(String giftnum, String gifttitle, String giftpart, String giftimg, String giftprice,
-			String giftstocks, String giftstockm, String giftstockl, String giftstockxl, String gifttumimg) {
-		super();
-		this.giftnum = giftnum;
-		this.gifttitle = gifttitle;
-		this.giftpart = giftpart;
-		this.giftimg = giftimg;
-		this.giftprice = giftprice;
-		this.giftstocks = giftstocks;
-		this.giftstockm = giftstockm;
-		this.giftstockl = giftstockl;
-		this.giftstockxl = giftstockxl;
-		this.gifttumimg = gifttumimg;
-	}
+	
 	
 	
 }
