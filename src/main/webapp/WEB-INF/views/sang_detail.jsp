@@ -61,7 +61,6 @@ function changeitem() {
 	alert(test+"사이즈 추가합니다");
 	
 	$("#appenditem").append("<li>"+test+"</li>");
-
 }
 
 </script> 
