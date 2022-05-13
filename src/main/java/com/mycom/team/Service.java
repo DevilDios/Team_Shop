@@ -7,6 +7,10 @@ public interface Service {
    public void insert(String id,String pw,String name,String tel,String email,String address);
 
 
+
+
+
+
    /*
    public ArrayList<SangDTO> out();
    public ArrayList<SangDTO> detail(String gifttitle);  
@@ -15,7 +19,7 @@ public interface Service {
    public void giftinsert(String giftnum ,String gifttitle ,String giftpart ,String giftimg ,String giftprice ,String giftsize,
 		  					String giftstocks,String giftstockm,String giftstockl,String giftstockxl);
 
-   
+
    
    
    
@@ -101,8 +105,8 @@ public interface Service {
    
    
    
-   
-   
+   public ArrayList<Gift_DTO> sanglist();
+   public ArrayList<Gift_DTO> sangdetail(String gifttitle);
    
    
    
@@ -311,8 +315,7 @@ public interface Service {
 	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);   
 	   
 	   
-   
-   
+
    
    
    

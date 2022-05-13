@@ -38,87 +38,10 @@ public class HomeController {
 		return "main";
 	}
 	
-	//회원가입 폼
-	@RequestMapping(value = "/memberinput")
-	public String memberinput()
-	{
-		return "member_input";
-	}
-	
-	//회원가입완료
-	@RequestMapping(value = "/membersave")
-	public String membersave(HttpServletRequest request,Model mo)
-	{
-		Service dao = sqlSession.getMapper(Service.class);
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
-		String tel = request.getParameter("tel");
-		String email = request.getParameter("email");
-		String address = request.getParameter("address");
-		
-		dao.insert(id,pw,name,tel,email,address);
-		
-		return "redirect:index";
-	}
-	
 	@RequestMapping(value = "/gift_input")
-	public String gift_input()
+	public String giftinput()
 	{
 		return "gift_input";
-	}
-	
-	//상품 등록
-	@RequestMapping(value = "/giftsave")
-	public String giftsave(HttpServletRequest request,Model mo)
-	{
-		Service dao = sqlSession.getMapper(Service.class);
-		String giftnum = request.getParameter("giftnum");
-		String gifttitle = request.getParameter("gifttitle");
-		String giftpart = request.getParameter("giftpart");
-		String giftimg = request.getParameter("giftimg");
-		String giftprice = request.getParameter("giftprice");
-		String giftstocks = request.getParameter("giftstocks");
-		String giftstockm = request.getParameter("giftstockm");
-		String giftstockl = request.getParameter("giftstockl");		
-		String giftstockxl = request.getParameter("giftstockxl");
-		String gifttumimg = request.getParameter("gifttumimg");
-		
-		dao.giftinsert(giftnum, gifttitle, giftpart, giftimg, giftprice, giftstocks, giftstockm, giftstockl, giftstockxl, gifttumimg);
-
-		return "redirect:index";
-	}
-	
-	
-
-	
-	
-	/*
-	//상품리스트
-	@RequestMapping(value="/sanglist")
-	public String slist(HttpServletRequest request,Model mo) {	
-	Service dao = sqlSession.getMapper(Service.class);
-	ArrayList<SangDTO> list =  dao.out();
-	mo.addAttribute("list",list);
-	return "sang_list";
-	}
-	*/
-	//상품자세히보기
-	/*
-	@RequestMapping(value="/sangdetail")
-	public String sdetail(HttpServletRequest request,Model mo) {
-		
-		String gifttitle = request.getParameter("gifttitle");		
-		Service dao = sqlSession.getMapper(Service.class);
-		ArrayList<SangDTO> dlist = dao.detail("gifttitle");
-		mo.addAttribute("dlist",dlist);
-		return "sang_detail";
-	}
-	*/
-	@RequestMapping(value = "/sangdetail")
-	public String detail()
-	{
-		return "sang_detail";
 	}
 	
 	

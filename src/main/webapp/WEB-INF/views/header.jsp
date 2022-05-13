@@ -18,6 +18,7 @@ text-align: left;
 <body>
 <header>
    <nav>
+   
      <div>
 
  
@@ -40,20 +41,17 @@ text-align: left;
 			<a href="loginform"> 장바구니 </a>&emsp;
 		</c:otherwise>
 	</c:choose>        
-	
 
-
-		
-		  
-        
-  
      </div>
+
    </nav>
+   
+   
 <hr>
     <nav>
      <ul class="log_box">
         <a href="index"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
-            <a href="#"> Best </a> &emsp; 
+            <a href="bestlist"> Best </a> &emsp; 
              <a href="#"> Outer </a> &emsp;      
                  <a href="#"> Top </a>&emsp;
                    <a href="#"> Bottom </a>&emsp;

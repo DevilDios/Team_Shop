@@ -1,3 +1,4 @@
+
 package com.mycom.team;
 
 import java.util.ArrayList;
@@ -148,17 +149,7 @@ public class BlossomController {
 		hs.removeAttribute("islogon");
 		return "redirect: index";		
 	}
-		
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -169,18 +160,6 @@ public class BlossomController {
 		//데이터 전송해야함
 		return "order";
 	}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -212,3 +191,4 @@ public class BlossomController {
 	
 	
 }
+
