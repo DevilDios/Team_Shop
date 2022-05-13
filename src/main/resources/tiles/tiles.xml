@@ -22,45 +22,12 @@
 		<put-attribute name="title" value="회원가입"/>
 		<put-attribute name="content" value="/WEB-INF/views/member_input.jsp" />
 	</definition>
-
-	<definition name="loginform" extends="baseLayout">   
-		<put-attribute name="title" value="로그인"/>
-		<put-attribute name="content" value="/WEB-INF/views/loginform.jsp" />
-	</definition>
 	
-	<definition name="managerindex" extends="baseLayout">   
-		<put-attribute name="title" value="관리자 메인"/>
-		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
-		<put-attribute name="content" value="/WEB-INF/views/manager_main.jsp" />
-	</definition>	
-
-	<definition name="manager_memlist" extends="baseLayout">   
-		<put-attribute name="title" value="관리자 회원관리"/>
-		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
-		<put-attribute name="content" value="/WEB-INF/views/manager_memlist.jsp" />
-	</definition>
-
-	<definition name="manager_memmodify_form" extends="baseLayout">   
-		<put-attribute name="title" value="관리자 회원정보수정"/>
-		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
-		<put-attribute name="content" value="/WEB-INF/views/manager_memmodify_form.jsp" />
-	</definition>
-
-	<definition name="login_succeed" extends="baseLayout">   
-		<put-attribute name="title" value="로그인 성공"/>
-		<put-attribute name="content" value="/WEB-INF/views/login_succeed.jsp" />
-	</definition>
-
 	<definition name="gift_input" extends="baseLayout">   
 		<put-attribute name="title" value="상품등록"/>
 		<put-attribute name="content" value="/WEB-INF/views/gift_input.jsp" />
 	</definition>	
-
-	<definition name="user_modify_form" extends="baseLayout">   
-		<put-attribute name="title" value="유저 회원 정보 수정"/>
-		<put-attribute name="content" value="/WEB-INF/views/user_modify_form.jsp" />
-	</definition>	
-		
+	
 	<definition name="sang_list" extends="baseLayout">   
 		<put-attribute name="title" value="상품리스트"/>
 		<put-attribute name="content" value="/WEB-INF/views/sang_list.jsp" />
@@ -70,6 +37,39 @@
 		<put-attribute name="title" value="상품디테일"/>
 		<put-attribute name="content" value="/WEB-INF/views/sang_detail.jsp" />
 	</definition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -298,43 +298,43 @@
 
 <!--299 민호 끝-->
 <!--300 성욱 시작 -->
+	<definition name="loginform" extends="baseLayout">   
+		<put-attribute name="title" value="로그인"/>
+		<put-attribute name="content" value="/WEB-INF/views/loginform.jsp" />
+	</definition>
+	
+	<definition name="managerindex" extends="baseLayout">   
+		<put-attribute name="title" value="관리자 메인"/>
+		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/manager_main.jsp" />
+	</definition>	
 
+	<definition name="manager_memlist" extends="baseLayout">   
+		<put-attribute name="title" value="관리자 회원관리"/>
+		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/manager_memlist.jsp" />
+	</definition>
 
+	<definition name="manager_memmodify_form" extends="baseLayout">   
+		<put-attribute name="title" value="관리자 회원정보수정"/>
+		<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/manager_memmodify_form.jsp" />
+	</definition>
 
+	<definition name="login_succeed" extends="baseLayout">   
+		<put-attribute name="title" value="로그인 성공"/>
+		<put-attribute name="content" value="/WEB-INF/views/login_succeed.jsp" />
+	</definition>
 
+	<definition name="user_modify_form" extends="baseLayout">   
+		<put-attribute name="title" value="유저 회원 정보 수정"/>
+		<put-attribute name="content" value="/WEB-INF/views/user_modify_form.jsp" />
+	</definition>	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<definition name="order" extends="baseLayout">   
+		<put-attribute name="title" value="메인"/>
+		<put-attribute name="content" value="/WEB-INF/views/order.jsp" />
+	 </definition>
 
 
 

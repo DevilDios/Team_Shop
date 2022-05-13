@@ -102,9 +102,9 @@ function changeitem() {
           
         <tr><td colspan="2" style="text-align: center;">
                 <input type="button" value="장바구니" onclick="location.href='#'">
-                <input type="button" value="바로구매" onclick="location.href='#'">
+                <input type="button" value="바로구매" onclick="location.href='order'">
             </td></tr>
-
+  
     
   </table>
 		 

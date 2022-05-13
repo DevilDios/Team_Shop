@@ -9,4 +9,6 @@ public class SeokController {
 
 	@Autowired
 	public SqlSession sqlSession;
+	
+	
 }
