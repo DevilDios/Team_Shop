@@ -53,7 +53,7 @@ text-align: left;
     <nav>
      <ul class="log_box">
         <a href="index"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
-            <a href=""> Best </a> &emsp; 
+            <a href="bestlist"> Best </a> &emsp; 
              <a href="#"> Outer </a> &emsp;      
                  <a href="#"> Top </a>&emsp;
                    <a href="#"> Bottom </a>&emsp;

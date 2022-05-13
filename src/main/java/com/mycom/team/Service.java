@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public interface Service {
 	
    public void insert(String id,String pw,String name,String tel,String email,String address);
+
    public ArrayList<Member_DTO> getMemSelectAll();
    public Member_DTO getMemModify(String id);
    public void setMemModify(String id, String pw, String name, String tel, String email, String address);
@@ -12,6 +13,7 @@ public interface Service {
    public Member_DTO getLoginMember(String id, String pw);
    public void setUserModify(String id, String pw, String name, String tel, String email, String address);
    public void userDelete(String id);
+
 
    /*
    public ArrayList<SangDTO> out();
@@ -21,7 +23,7 @@ public interface Service {
    public void giftinsert(String giftnum ,String gifttitle ,String giftpart ,String giftimg ,String giftprice ,String giftsize,
 		  					String giftstocks,String giftstockm,String giftstockl,String giftstockxl);
 
-   
+
    
    
    
@@ -101,8 +103,8 @@ public interface Service {
    
    
    
-   
-   
+   public ArrayList<Gift_DTO> sanglist();
+   public ArrayList<Gift_DTO> sangdetail(String gifttitle);
    
    
    

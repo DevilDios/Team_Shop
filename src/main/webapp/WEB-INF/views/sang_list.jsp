@@ -1,55 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <style type="text/css">
-table,th,td{
+div{
 text-align: center;
+list-style: none;
 }
+
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+ 
 <div class="container">
-  <h2 style="text-align: center;">상품 리스트</h2>
-  <c:forEach items="${list}" var="sa">         
-  <table class="table table-hover table-condensed" style="text-align: center;">
-    <thead>
-      <tr>
-        <th>상품번호</th>      
-        <th>상품제목</th>
-        <th>가격</th>       
-        <th>상품사진</th>       
-        <th>수정/삭제</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>${sa.giftnum}</td>
-        <td>
-        <a href="sangdetail?giftnum=${sa.giftnum}">
-        ${sa.gifttitle}
+  <h2 style="text-align: center;"> BEST LIST </h2><br>
+  <div class="row">
+  <p style="text-align: right;"><a href="">인기순</a> | <a href="">가격순</a> | <a href="">최신순</a> </p>
+   <c:forEach items="${list}" var="s">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="sangdetail?gifttitle=${s.gifttitle}" target="_blank">
+          <img src="${pageContext.request.contextPath}/image/${s.giftimg}" style="width:200px; height:200px;">
+          <div class="caption">
+            <p>${s.gifttitle}</p>
+            <p>￦ ${s.giftprice}원</p>
+          </div>
         </a>
-        </td>     
-        <td>${sa.price}</td>       
-        <td><img src="${pageContext.request.contextPath}/dia/${sa.picture}" width="50" height="50"></td>    
-        <td>
-        <a href="sangmodify?dnum=${sa.giftnum}">
-         <button> 수정 </button>
-        </a>
-        <a href="sangdelete?dnum=${sa.giftnum}">
-         <button>   삭제</button>
-        </a>
-        
-        </td>
-      </tr>
-      
-    </tbody>
-  </table>
-  </c:forEach>
+      </div>
+    </div>
+    
+    
+   </c:forEach>
+  </div>
 </div>
+
+ 
 </body>
 </html>

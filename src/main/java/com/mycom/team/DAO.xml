@@ -98,9 +98,14 @@
 
 
 <!--100 영석 시작-->
-
-
-
+<!-- 상품리스트 -->
+<select id="sanglist" resultType="com.mycom.team.Gift_DTO">
+ select * from gift 
+</select>
+<!-- 상품상세보기/주문 -->
+<select id="sangdetail" resultType="com.mycom.team.Gift_DTO" >
+select * from gift where gifttitle = #{param1}
+</select>
 
 
 
