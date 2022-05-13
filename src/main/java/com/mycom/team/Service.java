@@ -6,13 +6,9 @@ public interface Service {
 	
    public void insert(String id,String pw,String name,String tel,String email,String address);
 
-   public ArrayList<Member_DTO> getMemSelectAll();
-   public Member_DTO getMemModify(String id);
-   public void setMemModify(String id, String pw, String name, String tel, String email, String address);
-   public void memberDelete(String id);
-   public Member_DTO getLoginMember(String id, String pw);
-   public void setUserModify(String id, String pw, String name, String tel, String email, String address);
-   public void userDelete(String id);
+
+
+
 
 
    /*
@@ -92,6 +88,12 @@ public interface Service {
    
    
    
+   
+   
+   
+   
+   
+  
    
    
    
@@ -296,25 +298,24 @@ public interface Service {
    
    
    
-   
+    
    
 //299 민호 끝 
 //300 성욱 시작
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+	public ArrayList<Member_DTO> getMemSelectAll();
+	public Member_DTO getMemModify(String id);
+	public void setMemModify(String id, String pw, String name, String tel, String email, String address);
+	public void memberDelete(String id);
+	public Member_DTO getLoginMember(String id, String pw);
+	public void setUserModify(String id, String pw, String name, String tel, String email, String address);
+	public void userDelete(String id);   
+	int cntNotice();
+	public ArrayList<Member_DTO> selectNotice(PageVO vo);
+	public void setOrder(String id, Gift_DTO dto);
+	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);   
+	   
+	   
+
    
    
    
@@ -400,22 +401,24 @@ public interface Service {
    
 //399 성욱 끝
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+ 
    
    
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

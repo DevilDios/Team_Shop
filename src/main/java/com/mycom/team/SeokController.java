@@ -18,6 +18,7 @@ public class SeokController {
 
 	@Autowired
 	public SqlSession sqlSession;
+
 	//회원가입 폼
 	@RequestMapping(value = "/memberinput")
 	public String memberinput()
@@ -65,6 +66,7 @@ public class SeokController {
 		return "sang_list";
 		
 	}
+
 	
 	
 }

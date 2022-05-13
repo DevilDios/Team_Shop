@@ -1,7 +1,7 @@
 package com.mycom.team;
 
 public class Gift_DTO {
-
+	
 	int giftnum;
 	String gifttitle,giftpart,giftimg,giftprice,giftstocks,giftstockm,giftstockl,giftstockxl,gifttumimg;
 
@@ -24,7 +24,6 @@ public class Gift_DTO {
 		this.giftstockxl = giftstockxl;
 		this.gifttumimg = gifttumimg;
 	}
-
 	public int getGiftnum() {
 		return giftnum;
 	}
@@ -105,7 +104,7 @@ public class Gift_DTO {
 		this.gifttumimg = gifttumimg;
 	}
 
-	
+
 	
 	
 }

@@ -10,38 +10,35 @@
  insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
 </insert>
 
-
-<select id="getMemSelectAll" resultType="com.mycom.team.Member_DTO">
-	select * from member
-</select>
-
-<select id="getMemModify" resultType="com.mycom.team.Member_DTO">
-	select * from member where id = #{param1}
-</select>
-
-<update id="setMemModify">
-	update member set pw=#{param2}, name=#{param3}, tel=#{param4}, email=#{param5}, address=#{param6} where id=#{param1}
-</update>
-
-<delete id="memberDelete">
-	delete from member where id=#{param1}
-</delete>
-
-<select id="getLoginMember" resultType="com.mycom.team.Member_DTO">
-	select * from member where id=#{param1} and pw=#{param2}
-</select>
-
-<update id="setUserModify">
-	update member set pw=#{param2}, name=#{param3}, tel=#{param4}, email=#{param5}, address=#{param6} where id=#{param1}
-</update>
-
-<delete id="userDelete">
-	delete from member where id=#{param1}
-</delete>
-
 <insert id="giftinsert">
  insert into gift values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
 </insert>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,48 +301,48 @@ select * from gift where gifttitle = #{param1}
 
 <!--300 민호 시작-->
 <!--301 성욱 시작-->
+<insert id="setOrder">
+	insert into giftorder values(#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})
+</insert>
 
+<select id="getMemSelectAll" resultType="com.mycom.team.Member_DTO">
+	select * from member
+</select>
 
+<select id="getMemModify" resultType="com.mycom.team.Member_DTO">
+	select * from member where id = #{param1}
+</select>
 
+<update id="setMemModify">
+	update member set pw=#{param2}, name=#{param3}, tel=#{param4}, email=#{param5}, address=#{param6} where id=#{param1}
+</update>
 
+<delete id="memberDelete">
+	delete from member where id=#{param1}
+</delete>
 
+<select id="getLoginMember" resultType="com.mycom.team.Member_DTO">
+	select * from member where id=#{param1} and pw=#{param2}
+</select>
 
+<update id="setUserModify">
+	update member set pw=#{param2}, name=#{param3}, tel=#{param4}, email=#{param5}, address=#{param6} where id=#{param1}
+</update>
 
+<delete id="userDelete">
+	delete from member where id=#{param1}
+</delete>
 
+<select id="cntNotice" resultType="int">
+	SELECT COUNT(*) FROM member <!-- count(*)는 테이블안에 있는 전체 행 개수를 집합 몇개인지 반환한다. -->
+</select>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<select id="selectNotice" resultType="com.mycom.team.Member_DTO">
+	SELECT  * FROM (
+		select rownum rn, A.* from(  
+			select id, pw, name, tel, email, address from member ORDER BY id DESC,name asc)A)
+	WHERE rn BETWEEN #{start} AND #{end}
+</select>
 
 
 

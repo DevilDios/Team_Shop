@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -54,14 +55,28 @@ public class BlossomController {
 	}
 
 	//관리자-회원관리
-	@RequestMapping(value = "/manager_memlist")
-	public String memmanager(Model model)
+	@RequestMapping("/manager_memlist")
+	public String noticeList(PageVO vo, Model model
+			, @RequestParam(value="nowPage", required=false)String nowPage
+			, @RequestParam(value="cntPerPage", required=false)String cntPerPage) 
 	{
-		Service dao = sqlSession.getMapper(Service.class);
-		ArrayList<Member_DTO> list = dao.getMemSelectAll();
-		model.addAttribute("list", list);
-				
-		return "manager_memlist"; 
+		Service noce = sqlSession.getMapper(Service.class);
+		int total = noce.cntNotice();//count 테이블 안에 전체 행 개수 반환
+		
+		if (nowPage == null && cntPerPage == null) {
+			nowPage = "1";
+			cntPerPage = "5";
+		} else if (nowPage == null) {
+			nowPage = "1";
+		} else if (cntPerPage == null) { 
+			cntPerPage = "5";
+		}
+		
+		vo = new PageVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+		model.addAttribute("paging", vo);
+		model.addAttribute("viewAll", noce.selectNotice(vo));
+		
+		return "manager_memlist";
 	}
 	
 
@@ -134,5 +149,46 @@ public class BlossomController {
 		hs.removeAttribute("islogon");
 		return "redirect: index";		
 	}
+
+	
+	
+	
+	@RequestMapping(value = "/order")
+	public String order()
+	{
+		//giftnum, orders, orderm, orderl
+		//데이터 전송해야함
+		return "order";
+	}	
+	
+	
+	
+	@RequestMapping(value = "/paid")
+	public String paid(HttpServletRequest request)
+	{
 		
+		String id = request.getParameter("id");
+		String giftnum = request.getParameter("giftnum");
+		String orderstatus = request.getParameter("orderstatus");
+		String gifts = request.getParameter("orders");
+		String giftm = request.getParameter("orderm");
+		String giftl = request.getParameter("orderl");
+		
+		Service dao = sqlSession.getMapper(Service.class);
+		dao.setOrder(id, giftnum, orderstatus, gifts, giftm, giftl);
+		
+		return "redirect: index"; //상품완료 페이지출력시키기
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
