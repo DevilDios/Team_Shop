@@ -16,8 +16,8 @@ public interface Service {
    public ArrayList<SangDTO> detail(String gifttitle);  
    */
 
-   public void giftinsert(String giftnum ,String gifttitle ,String giftpart ,String giftimg ,String giftprice ,String giftsize,
-		  					String giftstocks,String giftstockm,String giftstockl,String giftstockxl);
+   public void giftinsert(int giftnum ,String gifttitle ,String giftpart ,String giftimg ,int giftprice,
+		   int giftstocks,int giftstockm,int giftstockl,int giftstockxl,String gifttumimg);
 
 
    

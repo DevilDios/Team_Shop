@@ -11,9 +11,8 @@
 </insert>
 
 <insert id="giftinsert">
- insert into gift values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
+ insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
 </insert>
-
 
 
 
@@ -200,12 +199,9 @@ select * from gift where gifttitle = #{param1}
 
 <!--199 영석 끝-->
 <!--200 민호 시작-->
-
-
-
-
-
-
+	<select id="insertGift">
+insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
+	</select>
 
 
 

@@ -37,16 +37,7 @@ public class HomeController {
 	{
 		return "main";
 	}
-	
-	@RequestMapping(value = "/gift_input")
-	public String giftinput()
-	{
-		return "gift_input";
-	}
-	
-	
 
-	
 }
 
 
