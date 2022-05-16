@@ -28,6 +28,7 @@
 		<put-attribute name="content" value="/WEB-INF/views/gift_input.jsp" />
 	</definition>	
 	
+
 	
   
 
@@ -101,14 +102,16 @@
 		<put-attribute name="title" value="상품리스트"/>
 		<put-attribute name="content" value="/WEB-INF/views/sang_list.jsp" />
 	</definition>
-
 	
 	<definition name="sang_detail" extends="baseLayout">   
 		<put-attribute name="title" value="상품디테일"/>
 		<put-attribute name="content" value="/WEB-INF/views/sang_detail.jsp" />
 	</definition>
-
-
+	<definition name="sang_outer" extends="baseLayout">   
+		<put-attribute name="title" value="outer상품"/>
+		<put-attribute name="content" value="/WEB-INF/views/sang_outer.jsp" />
+	</definition>
+    	
 
 
 
