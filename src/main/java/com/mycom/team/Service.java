@@ -105,9 +105,18 @@ public interface Service {
    
    
    
-   public ArrayList<Gift_DTO> sanglist();
-   public ArrayList<Gift_DTO> sangdetail(String gifttitle);
-   
+   public ArrayList<Gift_DTO> sanglist(); //상품리스트(기본 최신순)
+   public ArrayList<Gift_DTO> sanglistprice(); //상품리스트(가격높은순)
+   public ArrayList<Gift_DTO> sanglistpricedown(); //상품리스트(가격낮은순)
+   public ArrayList<Gift_DTO> sanglistreadcnt(); //상품리스트(인기조회순)
+   public ArrayList<Gift_DTO> sangdetail(int giftnum); //상품상세보기
+   public ArrayList<Gift_DTO> outerlist(); //상품리스트(Outer list)
+   public ArrayList<Gift_DTO> toplist(); //상품리스트(Outer list)
+   public ArrayList<Gift_DTO> bottomlist(); //상품리스트(Outer list)
+   public ArrayList<Gift_DTO> sangoutprice(); //outer 높은가격순(Outer list)
+   public ArrayList<Gift_DTO> sangoutpricedown(); //outer 낮은가격순(Outer list)
+   public ArrayList<Gift_DTO> sangoutread(); //outer 조회순(Outer list)
+   public void readcnt(int giftnum);//조회수   
    
    
    
@@ -312,7 +321,14 @@ public interface Service {
 	int cntNotice();
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
 	public void setOrder(String id, Gift_DTO dto);
-	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);   
+	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);
+
+
+
+
+
+
+	
 	   
 	   
 

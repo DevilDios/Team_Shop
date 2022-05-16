@@ -3,14 +3,15 @@ package com.mycom.team;
 import org.springframework.web.multipart.MultipartFile;
 
 public class Gift_DTO {
-	
+
+	int giftnum,giftstocks,giftstockm,giftstockl,giftstockxl,giftprice,readcnt;
+	String gifttitle,giftpart,giftimg,gifttumimg;
+
 	public Gift_DTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	int giftnum,giftstocks,giftstockm,giftstockl,giftstockxl,giftprice;
-	String gifttitle,giftpart,giftimg,gifttumimg;
 	String fileName;
 	MultipartFile uploadFile;
 	
@@ -29,9 +30,8 @@ public class Gift_DTO {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-
 	public Gift_DTO(int giftnum, int giftstocks, int giftstockm, int giftstockl, int giftstockxl, int giftprice,
-			String gifttitle, String giftpart, String giftimg, String gifttumimg) {
+			int readcnt, String gifttitle, String giftpart, String giftimg, String gifttumimg) {
 		super();
 		this.giftnum = giftnum;
 		this.giftstocks = giftstocks;
@@ -39,6 +39,7 @@ public class Gift_DTO {
 		this.giftstockl = giftstockl;
 		this.giftstockxl = giftstockxl;
 		this.giftprice = giftprice;
+		this.readcnt = readcnt;
 		this.gifttitle = gifttitle;
 		this.giftpart = giftpart;
 		this.giftimg = giftimg;
@@ -91,6 +92,14 @@ public class Gift_DTO {
 
 	public void setGiftprice(int giftprice) {
 		this.giftprice = giftprice;
+	}
+
+	public int getReadcnt() {
+		return readcnt;
+	}
+
+	public void setReadcnt(int readcnt) {
+		this.readcnt = readcnt;
 	}
 
 	public String getGifttitle() {
