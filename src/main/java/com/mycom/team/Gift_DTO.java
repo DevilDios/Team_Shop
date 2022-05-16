@@ -1,7 +1,9 @@
 package com.mycom.team;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Gift_DTO {
-	
+
 	int giftnum,giftstocks,giftstockm,giftstockl,giftstockxl,giftprice,readcnt;
 	String gifttitle,giftpart,giftimg,gifttumimg;
 
@@ -10,6 +12,24 @@ public class Gift_DTO {
 		// TODO Auto-generated constructor stub
 	}
 
+	String fileName;
+	MultipartFile uploadFile;
+	
+	public MultipartFile getUploadFile() {
+		return uploadFile;
+	}
+
+	public void setUploadFile(MultipartFile uploadFile) {
+		this.uploadFile = uploadFile;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 	public Gift_DTO(int giftnum, int giftstocks, int giftstockm, int giftstockl, int giftstockxl, int giftprice,
 			int readcnt, String gifttitle, String giftpart, String giftimg, String gifttumimg) {
 		super();
