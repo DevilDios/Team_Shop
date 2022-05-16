@@ -6,9 +6,7 @@
 <mapper namespace="com.mycom.team.Service"> 
 
 
-<insert id="insert">
- insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
-</insert>
+
 
 <insert id="giftinsert">
  insert into gift values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
@@ -95,14 +93,62 @@
 
 
 <!--100 영석 시작-->
-<!-- 상품리스트 -->
+<!-- 회원가입 -->
+<insert id="insert">
+ insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
+</insert>
+<!-- best상품리스트 -->
 <select id="sanglist" resultType="com.mycom.team.Gift_DTO">
- select * from gift 
+ select * from gift order by giftnum desc
+</select>
+<!-- outer상품리스트 -->
+<select id="outerlist" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = 'out' order by giftnum desc
+</select>
+<!-- top상품리스트 -->
+<select id="toplist" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = 'top' order by giftnum desc
+</select>
+<!-- bottom상품리스트 -->
+<select id="bottomlist" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = 'bottom' order by giftnum desc
+</select>
+<!-- 상품리스트 높은가격순 -->
+<select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
+ select * from gift order by giftprice desc
+</select>
+<!-- 상품리스트 낮은가격순 -->
+<select id="sanglistpricedown" resultType="com.mycom.team.Gift_DTO">
+ select * from gift order by giftprice asc
+</select>
+<!-- 상품리스트 조회인기순 -->
+<select id="sanglistreadcnt" resultType="com.mycom.team.Gift_DTO">
+ select * from gift order by readcnt desc
 </select>
 <!-- 상품상세보기/주문 -->
 <select id="sangdetail" resultType="com.mycom.team.Gift_DTO" >
-select * from gift where gifttitle = #{param1}
+select * from gift where giftnum = #{param1}
 </select>
+
+<!-- outer 높은가격순 -->
+<select id="sangoutprice" resultType="com.mycom.team.Gift_DTO">
+select * from gift where giftpart = 'out' order by giftprice desc
+</select>
+<!-- outer 낮은가격순 -->
+<select id="sangoutpricedown" resultType="com.mycom.team.Gift_DTO">
+select * from gift where giftpart = 'out' order by giftprice asc
+</select>
+<!-- outer 조회인기순 -->
+<select id="sangoutread" resultType="com.mycom.team.Gift_DTO">
+select * from gift where giftpart = 'out' order by readcnt desc
+</select>
+
+
+
+<!-- 조회수 -->
+<update id="readcnt">
+update gift set readcnt = readcnt +1 where giftnum = #{param1}
+</update>
 
 
 

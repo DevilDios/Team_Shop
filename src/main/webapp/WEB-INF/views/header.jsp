@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="cnt.jsp"/>
 <style type="text/css">
 div {
 text-align: right;
@@ -52,9 +53,9 @@ text-align: left;
      <ul class="log_box">
         <a href="index"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
             <a href="bestlist"> Best </a> &emsp; 
-             <a href="#"> Outer </a> &emsp;      
-                 <a href="#"> Top </a>&emsp;
-                   <a href="#"> Bottom </a>&emsp;
+             <a href="outlist"> Outer </a> &emsp;      
+                 <a href="toplist"> Top </a>&emsp;
+                   <a href="bottomlist"> Bottom </a>&emsp;
      </ul>
    </nav>
 <hr>

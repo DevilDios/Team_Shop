@@ -5,9 +5,8 @@
 <html>
 <head>
 <style type="text/css">
-div{
+p{
 text-align: center;
-list-style: none;
 }
 
 </style>
@@ -17,13 +16,13 @@ list-style: none;
 <body>
  
 <div class="container">
-  <h2 style="text-align: center;"> BEST LIST </h2><br>
+  <h2 style="text-align: center;"> LIST </h2><br>
   <div class="row">
-  <p style="text-align: right;"><a href="">인기순</a> | <a href="">가격순</a> | <a href="">최신순</a> </p>
+  <p style="text-align: right;"><a href="sang_readcnt">인기(조회)순</a> | <a href="sanglist_price">높은가격순</a> | <a href="sanglist_dprice">낮은가격순</a> </p>
    <c:forEach items="${list}" var="s">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="thumbnail">
-        <a href="sangdetail?gifttitle=${s.gifttitle}" target="_blank">
+        <a href="sangdetail?giftnum=${s.giftnum}" target="_self">
           <img src="${pageContext.request.contextPath}/image/${s.giftimg}" style="width:200px; height:200px;">
           <div class="caption">
             <p>${s.gifttitle}</p>
