@@ -125,7 +125,7 @@ public class BlossomController {
 		String pw=request.getParameter("pw");
 		Service dao = sqlSession.getMapper(Service.class);
 		Member_DTO member =dao.getLoginMember(id,pw);
-			
+		
 		if(member !=null) 
 		{
 			HttpSession hs =request.getSession();
