@@ -301,10 +301,6 @@ select * from gift where gifttitle = #{param1}
 
 <!--300 민호 시작-->
 <!--301 성욱 시작-->
-<insert id="setOrder">
-	insert into giftorder values(#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})
-</insert>
-
 <select id="getMemSelectAll" resultType="com.mycom.team.Member_DTO">
 	select * from member
 </select>
@@ -344,10 +340,16 @@ select * from gift where gifttitle = #{param1}
 	WHERE rn BETWEEN #{start} AND #{end}
 </select>
 
+<insert id="setGiftOrder">
+	insert into giftorder values(#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})
+</insert>
 
-
-
-
+<select id="getOrderListDTO" resultType="com.mycom.team.Order_list_DTO">
+	select A.orderstatus, A.orders, A.orderm, A.orderl, B.giftimg, B.gifttitle, B.giftprice
+	from giftorder A inner join gift B
+	on A.giftnum = B.giftnum
+	where A.id = #{param1}
+</select>
 
 
 

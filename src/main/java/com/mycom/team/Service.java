@@ -311,8 +311,8 @@ public interface Service {
 	public void userDelete(String id);   
 	int cntNotice();
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
-	public void setOrder(String id, Gift_DTO dto);
-	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);   
+	public void setGiftOrder(String id, int giftnum, String orderstatus, int orders, int orderm, int orderl);
+	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
 	   
 	   
 

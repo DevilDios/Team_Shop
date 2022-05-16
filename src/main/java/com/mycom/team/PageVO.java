@@ -2,8 +2,8 @@ package com.mycom.team;
 
 public class PageVO {
 
-	private int nowPage, startPage, endPage, total, cntPerPage, lastPage, start, end;
-	private int cntPage = 5;
+	 int nowPage, startPage, endPage, total, cntPerPage, lastPage, start, end;
+	 int cntPage = 5;
 	
 	
 	public PageVO() {

@@ -1,7 +1,7 @@
 package com.mycom.team;
 
 public class Member_DTO {
-   String id,pw,name,tel,email,address;
+	String id,pw,name,tel,email,address;
 
 public Member_DTO() {}
 

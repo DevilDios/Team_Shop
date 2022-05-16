@@ -31,7 +31,7 @@ text-align: left;
 		<c:when test="${islogon == true && loginmember != null}">
 			<a href="user_modify_form">< ${loginmember.name} 님 ></a> &emsp; 
 			<a href="logout">로그아웃</a>	&emsp;
-			<a href="user_order"> 주문조회 </a>&emsp;
+			<a href="order_list"> 주문조회 </a>&emsp;
 			<a href="#"> 장바구니 </a>&emsp;
 		</c:when>
 		<c:otherwise>
