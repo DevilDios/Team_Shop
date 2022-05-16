@@ -12,8 +12,7 @@ public class Gift_DTO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
+	
 	String fileName;
 	MultipartFile uploadFile;
 	

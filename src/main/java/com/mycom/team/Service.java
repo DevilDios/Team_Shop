@@ -320,20 +320,9 @@ public interface Service {
 	public void userDelete(String id);   
 	int cntNotice();
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
-<<<<<<< HEAD
 	public void setGiftOrder(String id, int giftnum, String orderstatus, int orders, int orderm, int orderl);
 	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
-=======
-	public void setOrder(String id, Gift_DTO dto);
-	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);
 
-
-
-
-
-
-	
->>>>>>> 5dc21212afe90b5e6eef080f67e3733aa5ffe77e
 	   
 	   
 
