@@ -35,5 +35,10 @@ public class GiftServiceImpl implements Gift_Service{
 	public void deleteGift(Gift_DTO vo) {
 		Gift_DAO.deleteGift(vo);
 	}
+	
+	@Override
+	public void uploadGift(Gift_DTO vo) {
+		Gift_DAO.uploadGift(vo);
+	}
 
 }

@@ -6,14 +6,14 @@ public class Gift_DTO {
 
 	int giftnum,giftstocks,giftstockm,giftstockl,giftstockxl,giftprice,readcnt;
 	String gifttitle,giftpart,giftimg,gifttumimg;
-
+	String fileName;
+	MultipartFile uploadFile;
+	
 	public Gift_DTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	String fileName;
-	MultipartFile uploadFile;
 	
 	public MultipartFile getUploadFile() {
 		return uploadFile;
