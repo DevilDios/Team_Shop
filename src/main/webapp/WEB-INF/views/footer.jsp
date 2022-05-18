@@ -12,8 +12,6 @@
 <p style="text-align: center;">회사소개 &emsp; 이용안내 &emsp; 이용약관 &emsp; 개인정보 &emsp; 처리방침이메일무단수집거부</p>
 <hr>
 
-
-
 <p style="text-align: center;"> 
 BLOSSOM<br>
 상호명 : BLOSSOM대표: 노소현대표전화: 010-7225-8060팩스: 0504-347-2955<br>

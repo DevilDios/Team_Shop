@@ -154,11 +154,23 @@ public class BlossomController {
 	
 	//결제 페이지 결제하는곳
 	@RequestMapping(value = "/order")
-	public String order()
+	public String order(HttpServletRequest request,Model mo)
 	{
 		//Giftimg, gifttitle, orders, orderm, orderl, ordertotalprice
 		//데이터 전송해야함
 		//결제하기
+        /*
+		String giftimg = request.getParameter("giftimg");
+		String gifttitle = request.getParameter("gifttitle");
+		int orders = Integer.parseInt(request.getParameter("orders"));
+		int orderm = Integer.parseInt(request.getParameter("orderm"));
+		int orderl = Integer.parseInt(request.getParameter("orderl"));
+		int ordertotalprice = Integer.parseInt(request.getParameter("sum"));
+		Service dao = sqlSession.getMapper(Service.class);
+		
+		mo.addAttribute(request);
+		*/
+		
 		return "order";
 	}	
 	
@@ -190,14 +202,7 @@ public class BlossomController {
 		return "order_list";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 }
