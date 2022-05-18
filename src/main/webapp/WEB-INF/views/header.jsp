@@ -57,12 +57,6 @@
             	<li><a href="partlist?part=out"> Outer </a></li>
                	<li><a href="partlist?part=top"> Top </a></li>
                	<li><a href="partlist?part=bottom"> Bottom </a></li>
-
-  	<li><a href="index"><img src="${pageContext.request.contextPath}/image/logo.jpg" ></a></li>
-            	<li><a href="bestlist"> Best </a></li>
-            	<li><a href="outlist"> Outer </a></li>
-               	<li><a href="toplist"> Top </a></li>
-
                 <li><a href="#"> Dress </a></li>
 				<li><a href="#"> Shoes </a></li>
                 <li><a href="#"> ACC </a></li>

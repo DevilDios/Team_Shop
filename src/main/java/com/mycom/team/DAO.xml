@@ -129,20 +129,13 @@
  select * from gift order by readcnt desc
 </select>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a4cf6f3ad97e3108f6cea5b0d1d428d6ea288488
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftnum desc
 </select>
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> a4cf6f3ad97e3108f6cea5b0d1d428d6ea288488
 <!-- part리스트 높은가격순 -->
 <select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftprice desc
