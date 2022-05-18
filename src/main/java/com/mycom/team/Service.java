@@ -97,10 +97,6 @@ public interface Service {
    
    
    
-   
-   
-   
-   
 //100 영석 시작   
    
    
@@ -117,15 +113,6 @@ public interface Service {
    public ArrayList<Gift_DTO> sangoutpricedown(); //outer 낮은가격순(Outer list)
    public ArrayList<Gift_DTO> sangoutread(); //outer 조회순(Outer list)
    public void readcnt(int giftnum);//조회수   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    

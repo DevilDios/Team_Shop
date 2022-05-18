@@ -40,7 +40,7 @@ public class MinhoController {
 			 List<Gift_DTO> GiftList = GiftService.getGiftList();
 			 
 			// Model 정보 저장
-			model.addAttribute("GiftList",GiftList);
+			//model.addAttribute("GiftList",GiftList);
 			return "gift_list"; // View 이름 리턴
 		}
 
