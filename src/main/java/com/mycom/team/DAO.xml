@@ -97,12 +97,6 @@
 
 
 
-
-
-
-
-
-
 <!--100 영석 시작-->
 <!-- 회원가입 -->
 <insert id="insert">
@@ -223,6 +217,53 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 	
 
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
