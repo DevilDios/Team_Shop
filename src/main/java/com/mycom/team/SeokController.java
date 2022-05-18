@@ -59,101 +59,100 @@ public class SeokController {
 	
 	//Best상품리스트
 	@RequestMapping(value="/bestlist")
-	public String ko3(Model mo)
-	{  				
-		Service dao = sqlSession.getMapper(Service.class);
-		ArrayList<Gift_DTO> list = dao.sanglist();		
+	public String ko3(HttpServletRequest request, Model mo)
+	{  			
+	
+		Service dao = sqlSession.getMapper(Service.class);	
+		ArrayList<Gift_DTO> list  = dao.sanglist();
 		mo.addAttribute("list", list);		
-		return "sang_list";
+		return "sang_list";	
+	}
+	
+	//part리스트
+		@RequestMapping(value="/partlist")
+		public String ko33(HttpServletRequest request, Model mo)
+		{  
+			ArrayList<Gift_DTO> list =null;
+			Service dao = sqlSession.getMapper(Service.class);	
+			String part = request.getParameter("part");
+			if(part.equals("best"))
+			{
+			 list  = dao.sanglist();
+			}
+			else
+			{
+			  list  = dao.partlist(part);
+			}
+			
+			mo.addAttribute("list", list);
+			mo.addAttribute("part",part);
+			return "sang_list";	
+		}
+			
 		
-	}
-	//outer상품리스트
-		@RequestMapping(value="/outlist")
-		public String to3(HttpServletRequest request, Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.outerlist();		
-			mo.addAttribute("list", list);		
-			return "sang_outer";			
-		}
-		//top상품리스트
-		@RequestMapping(value="/toplist")
-		public String oo3(HttpServletRequest request, Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.toplist();		
-			mo.addAttribute("list", list);		
-			return "sang_list";			
-		}
-		//bottom상품리스트
-		@RequestMapping(value="/bottomlist")
-		public String bo3(HttpServletRequest request, Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.bottomlist();		
-			mo.addAttribute("list", list);		
-			return "sang_list";			
-				}
-	//best높은가격순
-	@RequestMapping(value="/sanglist_price")
-	public String ko4(Model mo)
-	{  				
-		Service dao = sqlSession.getMapper(Service.class);
-		ArrayList<Gift_DTO> list = dao.sanglistprice();		
-		mo.addAttribute("list", list);		
-		return "sang_list";		
-	}
-	//outer높은가격순
-		@RequestMapping(value="/out_price")
-		public String ii4(Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.sangoutprice();		
-			mo.addAttribute("list", list);		
-			return "sang_outer";			
-		}
-		//outer낮은가격순
-		@RequestMapping(value="/out_dprice")
-		public String i4(Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.sangoutpricedown();		
-			mo.addAttribute("list", list);		
-			return "sang_outer";			
-		}
-		//outer 인기순(조회수)
-		@RequestMapping(value="/out_readcnt")
-		public String u6(Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.sangoutread();		
-			mo.addAttribute("list", list);		
+		//part높은가격순
+		@RequestMapping(value="/sanglist_price")
+		public String ko4(HttpServletRequest request, Model mo)
+		{  	
+			ArrayList<Gift_DTO> list =null;
+			String part = request.getParameter("part");			
+			Service dao = sqlSession.getMapper(Service.class);			
+			
+			if(part.equals("best"))
+			{
+			 list  = dao.sangbestprice();
+			}
+			else
+			{
+			 list = dao.sanglistprice(part);	
+			}
+			mo.addAttribute("list", list);	
+			mo.addAttribute("part",part);
 			return "sang_list";		
 		}
 		
-	//best낮은가격순
+		//part낮은가격순
 		@RequestMapping(value="/sanglist_dprice")
-		public String ko5(Model mo)
-		{  				
+		public String ko5(HttpServletRequest request,Model mo)		
+		{  	
+			ArrayList<Gift_DTO> list =null;
+			String part = request.getParameter("part");				
 			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.sanglistpricedown();		
-			mo.addAttribute("list", list);		
+			
+			if(part.equals("best"))
+			{
+				 list = dao.sangbestdprice();
+			}
+			else
+			{
+				list = dao.sanglistpricedown(part);
+			}
+			mo.addAttribute("list", list);	
+			mo.addAttribute("part",part);
 			return "sang_list";		
 		}
-		
-		
-	//best인기순(조회수)
+		//part인기순(조회수)
 		@RequestMapping(value="/sang_readcnt")
-		public String ko6(Model mo)
-		{  				
-			Service dao = sqlSession.getMapper(Service.class);
-			ArrayList<Gift_DTO> list = dao.sanglistreadcnt();		
-			mo.addAttribute("list", list);		
-			return "sang_list";		
+		public String ko6(HttpServletRequest request,Model mo)
+		{  	
+			ArrayList<Gift_DTO> list = null;	
+		String part = request.getParameter("part");		
+		Service dao = sqlSession.getMapper(Service.class);		
+		if(part.equals("best"))
+		{
+			list = dao.sangbestreadcnt();
+		}
+		else
+		{
+			list = dao.sanglistreadcnt(part);
+		}
+		mo.addAttribute("list", list);	
+		mo.addAttribute("part",part);
+		return "sang_list";		
 		}
 		
-		
-		
+	
+	
     //조회수
 		public void readcnt(int giftnum)
 		{

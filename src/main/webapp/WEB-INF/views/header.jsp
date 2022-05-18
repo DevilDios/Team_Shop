@@ -22,7 +22,6 @@ text-align: left;
    
      <div>
 
- 
 	<c:choose>
 		<c:when test="${islogon == true && loginmember != null && loginmember.id eq 'master'}">
 			<a href="user_modify_form">< ${loginmember.name} 님 ></a> &emsp; 
@@ -52,10 +51,10 @@ text-align: left;
     <nav>
      <ul class="log_box">
         <a href="index"> 홈으로 </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
-            <a href="bestlist"> Best </a> &emsp; 
-             <a href="outlist"> Outer </a> &emsp;      
-                 <a href="toplist"> Top </a>&emsp;
-                   <a href="bottomlist"> Bottom </a>&emsp;
+            <a href="partlist?part=best"> Best </a> &emsp; 
+             <a href="partlist?part=out""> Outer </a> &emsp;      
+                 <a href="partlist?part=top""> Top </a>&emsp;
+                   <a href="partlist?part=bottom""> Bottom </a>&emsp;
      </ul>
    </nav>
 <hr>

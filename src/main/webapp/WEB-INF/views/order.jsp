@@ -11,13 +11,7 @@
 
 
 <form action="paid" align="center" method="post">
-<input type="hidden" name="id" value="${loginmember.id}">
-<input type="hidden" name="giftnum" value="#"> <%--상품코드--%>온라인 쇼핑몰 사업자 등록 없이
-<input type="hidden" name="orderstatus" value="payment complete">
-<input type="hidden" name="orders" value="#">
-<input type="hidden" name="orderm" value="#">
-<input type="hidden" name="orderl" value="#">
-<input type="hidden" name="ordertotalprice" value="#">
+
 
 <table align="center" width="700">
 
