@@ -70,8 +70,8 @@ function changeitem() {
    alert(test+"사이즈 추가합니다");
    
    $("#appenditem").append("<li>"+test+
-		   '수량 :'+
-		  ' <input type="text" name="amount" value="1" size="3" onchange="change();">'+
+		   ' size 수량 :'+
+		  ' <input type="text" name="amount" value="1" size="3" onchange="change();" style="border:none">'+
 		  ' <input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>'+"</li>");
 
 }

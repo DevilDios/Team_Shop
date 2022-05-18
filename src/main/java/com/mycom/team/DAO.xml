@@ -126,14 +126,10 @@
 </select>
 
 
-
-
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftnum desc
 </select>
-
-
 
 
 
