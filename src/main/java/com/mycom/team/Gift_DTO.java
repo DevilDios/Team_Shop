@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Gift_DTO {
 
+
 	int giftnum,giftstocks,giftstockm,giftstockl,giftstockxl,giftprice,readcnt;
 	String gifttitle,giftpart,giftimg,gifttumimg;
 	String fileName;
@@ -14,7 +15,6 @@ public class Gift_DTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	public MultipartFile getUploadFile() {
 		return uploadFile;
 	}
@@ -44,12 +44,12 @@ public class Gift_DTO {
 		this.giftpart = giftpart;
 		this.giftimg = giftimg;
 		this.gifttumimg = gifttumimg;
+
 	}
 
 	public int getGiftnum() {
 		return giftnum;
 	}
-
 	public void setGiftnum(int giftnum) {
 		this.giftnum = giftnum;
 	}
@@ -105,23 +105,18 @@ public class Gift_DTO {
 	public String getGifttitle() {
 		return gifttitle;
 	}
-
 	public void setGifttitle(String gifttitle) {
 		this.gifttitle = gifttitle;
 	}
-
 	public String getGiftpart() {
 		return giftpart;
 	}
-
 	public void setGiftpart(String giftpart) {
 		this.giftpart = giftpart;
 	}
-
 	public String getGiftimg() {
 		return giftimg;
 	}
-
 	public void setGiftimg(String giftimg) {
 		this.giftimg = giftimg;
 	}
@@ -129,11 +124,8 @@ public class Gift_DTO {
 	public String getGifttumimg() {
 		return gifttumimg;
 	}
-
 	public void setGifttumimg(String gifttumimg) {
 		this.gifttumimg = gifttumimg;
 	}
 
-	
-	
 }

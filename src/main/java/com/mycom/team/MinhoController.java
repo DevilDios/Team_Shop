@@ -20,13 +20,12 @@ public class MinhoController {
 	public SqlSession sqlSession;
 	@Autowired
 	private Gift_Service GiftService;
-	
-	
-		@RequestMapping(value = "/gift_input")
-		public String giftinput()
-		{
-			return "gift_input";
-		}
+
+	@RequestMapping(value = "/gift_input")
+	public String giftinput()
+	{
+		return "gift_input";
+	}
 
 		@RequestMapping(value = "/Gift_Insert")
 		public String Gift_Insert(HttpServletRequest request,Model mo)

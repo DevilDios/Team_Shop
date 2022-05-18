@@ -97,56 +97,77 @@
 
 
 
+
+
+
+
+
+
 <!--100 영석 시작-->
 <!-- 회원가입 -->
 <insert id="insert">
  insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
 </insert>
+
+
 <!-- best상품리스트 -->
 <select id="sanglist" resultType="com.mycom.team.Gift_DTO">
  select * from gift order by giftnum desc
 </select>
-<!-- outer상품리스트 -->
-<select id="outerlist" resultType="com.mycom.team.Gift_DTO">
- select * from gift where giftpart = 'out' order by giftnum desc
-</select>
-<!-- top상품리스트 -->
-<select id="toplist" resultType="com.mycom.team.Gift_DTO">
- select * from gift where giftpart = 'top' order by giftnum desc
-</select>
-<!-- bottom상품리스트 -->
-<select id="bottomlist" resultType="com.mycom.team.Gift_DTO">
- select * from gift where giftpart = 'bottom' order by giftnum desc
-</select>
-<!-- 상품리스트 높은가격순 -->
-<select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
+
+
+<!-- best상품리스트 높은가격순 -->
+<select id="sangbestprice" resultType="com.mycom.team.Gift_DTO">
  select * from gift order by giftprice desc
 </select>
-<!-- 상품리스트 낮은가격순 -->
-<select id="sanglistpricedown" resultType="com.mycom.team.Gift_DTO">
+
+<!-- best상품리스트  낮은가격순 -->
+<select id="sangbestdprice" resultType="com.mycom.team.Gift_DTO">
  select * from gift order by giftprice asc
 </select>
-<!-- 상품리스트 조회인기순 -->
-<select id="sanglistreadcnt" resultType="com.mycom.team.Gift_DTO">
+
+<!-- best상품리스트 인기(조회)순 -->
+<select id="sangbestreadcnt" resultType="com.mycom.team.Gift_DTO">
  select * from gift order by readcnt desc
 </select>
+
+
+
+
+<!-- part상품리스트 -->
+<select id="partlist" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = #{param1} order by giftnum desc
+</select>
+
+
+
+
+
+<!-- part리스트 높은가격순 -->
+<select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = #{param1} order by giftprice desc
+</select>
+
+
+<!-- part리스트 낮은가격순 -->
+<select id="sanglistpricedown" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = #{param1} order by giftprice asc
+</select>
+
+
+<!-- part리스트 조회인기순 -->
+<select id="sanglistreadcnt" resultType="com.mycom.team.Gift_DTO">
+ select * from gift where giftpart = #{param1} order by readcnt desc
+</select>
+
+
+
 <!-- 상품상세보기/주문 -->
 <select id="sangdetail" resultType="com.mycom.team.Gift_DTO" >
 select * from gift where giftnum = #{param1}
 </select>
 
-<!-- outer 높은가격순 -->
-<select id="sangoutprice" resultType="com.mycom.team.Gift_DTO">
-select * from gift where giftpart = 'out' order by giftprice desc
-</select>
-<!-- outer 낮은가격순 -->
-<select id="sangoutpricedown" resultType="com.mycom.team.Gift_DTO">
-select * from gift where giftpart = 'out' order by giftprice asc
-</select>
-<!-- outer 조회인기순 -->
-<select id="sangoutread" resultType="com.mycom.team.Gift_DTO">
-select * from gift where giftpart = 'out' order by readcnt desc
-</select>
+
 
 
 
@@ -154,59 +175,6 @@ select * from gift where giftpart = 'out' order by readcnt desc
 <update id="readcnt">
 update gift set readcnt = readcnt +1 where giftnum = #{param1}
 </update>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -300,12 +268,11 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 
 
 
+
+
+
 <!--300 민호 시작-->
 <!--301 성욱 시작-->
-<insert id="setOrder">
-	insert into giftorder values(#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})
-</insert>
-
 <select id="getMemSelectAll" resultType="com.mycom.team.Member_DTO">
 	select * from member
 </select>
@@ -345,10 +312,16 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 	WHERE rn BETWEEN #{start} AND #{end}
 </select>
 
+<insert id="setGiftOrder">
+	insert into giftorder values(#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})
+</insert>
 
-
-
-
+<select id="getOrderListDTO" resultType="com.mycom.team.Order_list_DTO">
+	select A.orderstatus, A.orders, A.orderm, A.orderl, B.giftimg, B.gifttitle, B.giftprice
+	from giftorder A inner join gift B
+	on A.giftnum = B.giftnum
+	where A.id = #{param1}
+</select>
 
 
 

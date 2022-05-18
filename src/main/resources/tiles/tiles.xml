@@ -7,7 +7,7 @@
 <tiles-definitions>
 
 	<definition name="baseLayout"  template="/WEB-INF/views/layout.jsp">	
-		<put-attribute name="title" value="디폴트"/>
+		<put-attribute name="title" value="default"/>
 		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
 		<put-attribute name="content" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
@@ -91,12 +91,13 @@
 
 
 
+
+
+
+
+
+
 <!--100 영석 시작-->
-
-
-
-
-
  	<definition name="sang_list" extends="baseLayout">   
  		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
 		<put-attribute name="title" value="상품리스트"/>
@@ -112,13 +113,6 @@
 		<put-attribute name="content" value="/WEB-INF/views/sang_outer.jsp" />
 	</definition>
     	
-
-
-
-
-
-
-
 
 
 
@@ -344,8 +338,17 @@
 	<definition name="order" extends="baseLayout">   
 		<put-attribute name="title" value="주문"/>
 		<put-attribute name="content" value="/WEB-INF/views/order.jsp" />
-	 </definition>
+	</definition>
 
+	<definition name="paid" extends="baseLayout">   
+		<put-attribute name="title" value="결제 완료"/>
+		<put-attribute name="content" value="/WEB-INF/views/paid.jsp" />
+	</definition>
+	
+	<definition name="order_list" extends="baseLayout">   
+		<put-attribute name="title" value="주문조회"/>
+		<put-attribute name="content" value="/WEB-INF/views/order_list.jsp" />
+	</definition>
 
 
 

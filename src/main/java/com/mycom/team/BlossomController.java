@@ -125,7 +125,7 @@ public class BlossomController {
 		String pw=request.getParameter("pw");
 		Service dao = sqlSession.getMapper(Service.class);
 		Member_DTO member =dao.getLoginMember(id,pw);
-			
+		
 		if(member !=null) 
 		{
 			HttpSession hs =request.getSession();
@@ -152,42 +152,57 @@ public class BlossomController {
 
 	
 	
-	
+	//결제 페이지 결제하는곳
 	@RequestMapping(value = "/order")
-	public String order()
+	public String order(HttpServletRequest request,Model mo)
 	{
-		//giftnum, orders, orderm, orderl
+		//Giftimg, gifttitle, orders, orderm, orderl, ordertotalprice
 		//데이터 전송해야함
+		//결제하기
+        /*
+		String giftimg = request.getParameter("giftimg");
+		String gifttitle = request.getParameter("gifttitle");
+		int orders = Integer.parseInt(request.getParameter("orders"));
+		int orderm = Integer.parseInt(request.getParameter("orderm"));
+		int orderl = Integer.parseInt(request.getParameter("orderl"));
+		int ordertotalprice = Integer.parseInt(request.getParameter("sum"));
+		Service dao = sqlSession.getMapper(Service.class);
+		
+		mo.addAttribute(request);
+		*/
+		
 		return "order";
 	}	
 	
-	
-	
-	@RequestMapping(value = "/paid")
+	//결제 완료 처리
+	@RequestMapping(value = "/paid", method = RequestMethod.POST)
 	public String paid(HttpServletRequest request)
 	{
-		
 		String id = request.getParameter("id");
-		String giftnum = request.getParameter("giftnum");
+		int giftnum = Integer.parseInt(request.getParameter("giftnum"));
 		String orderstatus = request.getParameter("orderstatus");
-		String gifts = request.getParameter("orders");
-		String giftm = request.getParameter("orderm");
-		String giftl = request.getParameter("orderl");
+		int orders = Integer.parseInt(request.getParameter("orders"));
+		int orderm = Integer.parseInt(request.getParameter("orderm"));
+		int orderl = Integer.parseInt(request.getParameter("orderl"));
 		
 		Service dao = sqlSession.getMapper(Service.class);
-		dao.setOrder(id, giftnum, orderstatus, gifts, giftm, giftl);
+		dao.setGiftOrder(id, giftnum, orderstatus, orders, orderm, orderl); //giftorder 테이블 초기화
 		
-		return "redirect: index"; //상품완료 페이지출력시키기
+		return "paid"; //결제완료 페이지출력시키기
 	}
 	
+	//주문목록 리스트
+	@RequestMapping(value = "order_list")
+	public String order_list(HttpServletRequest request, Model model)
+	{
+		Service dao = sqlSession.getMapper(Service.class);
+		String id = ((Member_DTO)request.getSession().getAttribute("loginmember")).getId();
+		ArrayList<Order_list_DTO> oldto = dao.getOrderListDTO(id);
+		model.addAttribute("oldto", oldto);
+		return "order_list";
+	}
 	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 }

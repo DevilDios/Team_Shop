@@ -94,35 +94,37 @@ public interface Service {
    
    
    
-   
-   
-   
-   
 //100 영석 시작   
    
    
    
    public ArrayList<Gift_DTO> sanglist(); //상품리스트(기본 최신순)
-   public ArrayList<Gift_DTO> sanglistprice(); //상품리스트(가격높은순)
-   public ArrayList<Gift_DTO> sanglistpricedown(); //상품리스트(가격낮은순)
-   public ArrayList<Gift_DTO> sanglistreadcnt(); //상품리스트(인기조회순)
+   
+   
+   
+   
+   public ArrayList<Gift_DTO> sanglistprice(String part); //상품리스트(가격높은순)
+   
+   
+   public ArrayList<Gift_DTO> sangbestprice();//best 높은가격순
+   
+   public ArrayList<Gift_DTO> sangbestdprice();//best 낮은가격순
+   
+   public ArrayList<Gift_DTO> sangbestreadcnt();//best 인기(조회)순
+   
+   
+   
+   public ArrayList<Gift_DTO> sanglistpricedown(String part); //상품리스트(가격낮은순)   
+   
+   
+   public ArrayList<Gift_DTO> sanglistreadcnt(String part); //상품리스트(인기조회순)  
+   
+   
    public ArrayList<Gift_DTO> sangdetail(int giftnum); //상품상세보기
-   public ArrayList<Gift_DTO> outerlist(); //상품리스트(Outer list)
-   public ArrayList<Gift_DTO> toplist(); //상품리스트(Outer list)
-   public ArrayList<Gift_DTO> bottomlist(); //상품리스트(Outer list)
-   public ArrayList<Gift_DTO> sangoutprice(); //outer 높은가격순(Outer list)
-   public ArrayList<Gift_DTO> sangoutpricedown(); //outer 낮은가격순(Outer list)
-   public ArrayList<Gift_DTO> sangoutread(); //outer 조회순(Outer list)
+  
+   
+   public ArrayList<Gift_DTO> partlist(String part); 
    public void readcnt(int giftnum);//조회수   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    
@@ -308,15 +310,9 @@ public interface Service {
 	public void userDelete(String id);   
 	int cntNotice();
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
-	public void setOrder(String id, Gift_DTO dto);
-	public void setOrder(String id, String giftnum, String orderstatus, String gifts, String giftm, String giftl);
+	public void setGiftOrder(String id, int giftnum, String orderstatus, int orders, int orderm, int orderl);
+	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
 
-
-
-
-
-
-	
 	   
 	   
 
