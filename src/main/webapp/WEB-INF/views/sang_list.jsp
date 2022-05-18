@@ -47,8 +47,7 @@ border: none;
         </a>
       </div>
     </div>
-    
-    
+
     
     
 

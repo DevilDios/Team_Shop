@@ -51,8 +51,7 @@
 
 
 
-<div class="container">
-  <p>The .table-bordered class adds borders to a table:</p>            
+<div class="container">            
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -62,13 +61,7 @@
       </tr>
     </thead>
     <tbody>
-    
-    
-    
-    
 <c:forEach items="${oldto}" var="g">
-
-
 <tr> 
 <td style="text-align : center; vertical-align : middle;" width="150"><img src="${pageContext.request.contextPath}/image/${g.giftimg}" height="100"></td> 
 <td><strong>${g.gifttitle}</strong><hr>

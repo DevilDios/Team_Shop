@@ -97,12 +97,6 @@
 
 
 
-
-
-
-
-
-
 <!--100 영석 시작-->
 <!-- 회원가입 -->
 <insert id="insert">
@@ -129,12 +123,10 @@
  select * from gift order by readcnt desc
 </select>
 
-
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftnum desc
 </select>
-
 
 <!-- part리스트 높은가격순 -->
 <select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
@@ -225,6 +217,53 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 	
 
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
