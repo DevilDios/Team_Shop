@@ -31,9 +31,16 @@ public class Gift_DAO{
 		System.out.println("===> Mybatis로 getContent() 기능 처리");
 		return (Gift_DTO) mybatis.selectOne("GiftMapper.getContent", vo);
 	}
+	
+	public Gift_DTO uploadGift(Gift_DTO vo) {
+		System.out.println("===> Mybatis로 getContent() 기능 처리");
+		return (Gift_DTO) mybatis.selectOne("GiftMapper.uploadGift", vo);
+	}
 
 	public List<Gift_DTO> getGiftList() {
 		System.out.println("===> Mybatis로 getGiftList() 기능 처리");
 		return mybatis.selectList("GiftMapper.getGiftList");
 	}
+	
+	
 }

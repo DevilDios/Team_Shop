@@ -8,7 +8,7 @@
 <body>
 	<h1>상품 등록</h1>
 	<hr>
-	<form action="insertGift" method="post" enctype="multipart/form-data" >
+	<form action="Gift_Insert" method="post" enctype="multipart/form-data" >
 		<table border="1">
 			<tr>
 			<td>상품코드(수정불가)</td><td><input type="text" name = "giftnum"></td>
@@ -20,7 +20,7 @@
 			<td>종류(반팔,맨투맨 이런것)</td><td><input type="text" name = "giftpart"></td>
 			</tr>
 			<tr>
-			<td>썸네일 이미지</td><td><input type="file" name = "gifttumimg"></td>
+			<td>썸네일 이미지</td><td><input type="text" name = "gifttumimg"></td>
 			</tr>
 			<tr>
 			<td>가격</td><td><input type="text" name = "giftprice"></td>
@@ -38,7 +38,7 @@
 			<td>XL사이즈재고</td><td><input type="text" name = "giftstockxl"></td>
 			</tr>
 			<tr>
-			<td>설명 이미지 추가</td><td><input type="file" name = "giftimg"></td>
+			<td>설명 이미지 추가</td><td><input type="text" name = "giftimg"></td>
 			</tr>
 			<tr>
 			<td colspan="2" align="center"><input type="submit" value="등록하기" /></td>
