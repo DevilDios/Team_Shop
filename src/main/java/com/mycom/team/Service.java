@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface Service {
 	
-   public void insert(String id,String pw,String name,String tel,String email,String address);
+
 
 
 
@@ -95,7 +95,7 @@ public interface Service {
    
    
 //100 영석 시작   
-   
+	public void insert(String id,String pw,String name,String tel,String email,String address);
    
    
    public ArrayList<Gift_DTO> sanglist(); //상품리스트(기본 최신순)

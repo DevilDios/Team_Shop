@@ -159,8 +159,8 @@ public class BlossomController {
 		//Giftimg, gifttitle, orders, orderm, orderl, ordertotalprice
 		//데이터 전송해야함
 		//결제하기
-        /*
-		String giftimg = request.getParameter("giftimg");
+        
+		
 		String gifttitle = request.getParameter("gifttitle");
 		int orders = Integer.parseInt(request.getParameter("orders"));
 		int orderm = Integer.parseInt(request.getParameter("orderm"));
@@ -169,7 +169,7 @@ public class BlossomController {
 		Service dao = sqlSession.getMapper(Service.class);
 		
 		mo.addAttribute(request);
-		*/
+		
 		
 		return "order";
 	}	
@@ -206,4 +206,3 @@ public class BlossomController {
 	
 	
 }
-

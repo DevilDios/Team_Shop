@@ -4,7 +4,7 @@
 <html>
 <head>
 <style type="text/css">
-th,td{
+th,td,div{
 text-align: center;
 }
 </style>
@@ -13,22 +13,32 @@ text-align: center;
 </head>
 <h1 style="text-align: center;" > 회원가입 </h1>
 <body>
+<center>
+ <div class="card align-middle" style="width:27rem; border-radius:20px;" >
+   <div class="card-title" style="margin-top:30px;">
 <form action="membersave" method="post">
-<table border="1" width="300" align="center">
-<tr><th>ID</th><td><input type="text" name="id"> </td></tr>
-<tr><th>PW</th><td><input type="password" name="pw"> </td></tr>
-<tr><th>이름</th><td><input type="text" name="name"> </td></tr>
-<tr><th>전화</th><td><input type="text" name="tel"> </td></tr>
-<tr><th>이메일</th><td><input type="text" name="email"> </td></tr>
-<tr><th>주소</th><td><input type="text" name="address"> </td></tr>
-
-<tr>
-<td colspan="2" style="text-align: center;">
-<input type="submit" value="회원가입"> 
-<input type="reset" value="취소"> 
-</td>
-</tr>
-</table>
+ 
+  <h4> 가입정보를 입력해주세요 </h4>
+  <div class="row" style="text-align: center;" >
+    
+  <input type="text" name="id" class="form-control input-lg" placeholder="ID" />    
+  <br>
+  <input type="password" name="pw" class="form-control input-lg" placeholder="PW" />
+  <br>
+  <input type="text" name="name" class="form-control input-lg" placeholder="Name" />
+  <br>
+   <input type="text" name="tel" class="form-control input-lg" placeholder="Tel" />
+  <br>
+  <input type="text" name="email" class="form-control input-lg" placeholder="Email" />
+  <br>
+  <input type="text" name="address" class="form-control input-lg" placeholder="Address" />
+  <br>
+  <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">회원가입</button>
+  </div>
 </form>
+
+</div>
+</div>
+</center>
 </body>
 </html>

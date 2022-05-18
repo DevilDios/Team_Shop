@@ -14,6 +14,10 @@ size: 70%;
 li{
    list-style:none;
    }
+.centered {
+        left: 50%; 
+        margin-left: 420px;
+      }
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -65,22 +69,23 @@ function change () {
 
 function changeitem() {
 
-   var test = $("select[name = giftsize]").val(); 
+   var size = $("select[name = giftsize]").val(); 
 
-   alert(test+"사이즈 추가합니다");
+   alert(size+"사이즈 추가합니다");
    
-   $("#appenditem").append("<li>"+test+
-		   '수량 :'+
-		  ' <input type="text" name="amount" value="1" size="3" onchange="change();">'+
-		  ' <input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>'+"</li>");
+   $("#appenditem").append("<li>"+size+
+		   ' size 수량 :'+
+		  ' <input type="text" name="amount" value="1" size="3" onchange="change();" style="border:none">'+
+		  ' <input type="button" value=" + " onclick="add();">&emsp;<input type="button" value=" - " onclick="del();"><br>'+"</li>");
 
 }
 
-</script> 
- <div>
- 
+</script  > 
+<div id="section3" class="container-fluid">
+ <div class="container container-table" >
+   <div class="col-xl-6" style="text-align: center;">
    <form name="form" method="post" >
-  <table class="table table-hover" width="50%" align="center" >  
+  <table class="table table-hover" width="50%" align="center"  style="margin-left: auto; margin-right: auto;" >  
         
       <tr> <td rowspan="9" style="text-align: center;"><img  src="${pageContext.request.contextPath}/image/${d.giftimg}" width="300" height="300">  </td></tr>
         
@@ -90,7 +95,7 @@ function changeitem() {
        <tr><th>판매가</th><td>${d.giftprice}원</td></tr>
        
        <tr><th>필수옵션</th><td>
-                              <select class="form-control"  name="giftsize" onchange="changeitem()" >
+                              <select class="form-control"  name="giftsize" onchange="changeitem()" style=" width:150px;" >
 					    <option value="">사이즈선택</option>
 					    <option value="S">S / ${d.giftprice} 원</option>
 					    <option value="M">M / ${d.giftprice} 원</option>
@@ -125,11 +130,32 @@ function changeitem() {
   <input type="button" value="상품목록" onclick="location.href='bestlist'" class="btn btn-info">
                 <input type="button" value="홈으로" onclick="location.href='index'" class="btn btn-primary">
   </div>
-	  <p align="center" style="text-align: center;" >
+ </div>
+ <br>
+   <div id="myNavbar">
+        <ul class="nav nav-tabs centered">
+          <li><a href="#section1">상품상세보기</a></li>
+          <li><a href="#section2">배송/교환/환불안내</a></li>     
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="section1" class="container-fluid">
+	  <p align="center" >
 	    <img  src="${pageContext.request.contextPath}/image/${d.gifttumimg}">
 	  </p>
-	 
- 
+</div>
+  <div id="section2" class="container-fluid">
+  
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar" >
+        <ul class="nav nav-tabs centered">
+         <li><a href="#section1"> 상품상세보기</a></li>
+          <li><a href="#section2">배송/교환/환불안내</a></li>
+          <li><a href="#section3">맨위로</a></li>       
+        </ul>
+      </div>
+ </div>
 </div>
 
 </c:forEach>
