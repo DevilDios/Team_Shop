@@ -16,9 +16,6 @@ public interface Service {
    public ArrayList<SangDTO> detail(String gifttitle);  
    */
 
-   public void giftinsert(int giftnum ,String gifttitle ,String giftpart ,String giftimg ,int giftprice,
-		   int giftstocks,int giftstockm,int giftstockl,int giftstockxl,String gifttumimg);
-
 
    
    
@@ -214,6 +211,13 @@ public interface Service {
 //199 영석 끝   
 //200 민호 시작
    
+	public Gift_DTO getGiftModify(int giftnum);
+	public void setGiftModify(int giftnum ,String gifttitle ,String giftpart ,String giftimg ,int giftprice,
+			   int giftstocks,int giftstockm,int giftstockl,int giftstockxl,String gifttumimg,int readcnt);
+	public void GiftDelete(int giftnum);
+	public void GiftInsert(int giftnum ,String gifttitle ,String giftpart ,String giftimg ,int giftprice,
+		   int giftstocks,int giftstockm,int giftstockl,int giftstockxl,String gifttumimg,int readcnt);
+
    
    
    
@@ -292,23 +296,7 @@ public interface Service {
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+  
     
    
 //299 민호 끝 

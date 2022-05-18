@@ -8,9 +8,15 @@
 
 
 
-<insert id="giftinsert">
- insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
-</insert>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -213,72 +219,25 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 
 <!--199 영석 끝-->
 <!--200 민호 시작-->
-	<select id="insertGift">
-insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10})
+	<select id="GiftInsert">
+		insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10},#{param11})
 	</select>
 
+	<delete id="GiftDelete">
+		delete from gift where giftnum = #{param1}
+	</delete>
+	
+	<select id="getGiftModify" resultType="com.mycom.team.Gift_DTO">
+		select * from gift where giftnum = #{param1}
+	</select>
+	
+	<update id="setGiftModify">
+		update gift set gifttitle=#{param2}, giftpart=#{param3}, gifttumimg=#{param4}, giftprice=#{param5}, giftstocks=#{param6},
+		giftstockm=#{param7},giftstockl=#{param8},giftstockxl=#{param9},giftimg=#{param10},readcnt=#{param11} where giftnum=#{param1}
+	</update>
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 
