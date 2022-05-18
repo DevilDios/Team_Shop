@@ -150,9 +150,11 @@ public class SeokController {
 		mo.addAttribute("part",part);
 		return "sang_list";		
 		}
+
 		
-	
-	
+		
+		
+		
     //조회수
 		public void readcnt(int giftnum)
 		{
