@@ -97,10 +97,6 @@ public interface Service {
    
    
    
-   
-   
-   
-   
 //100 영석 시작   
    
    
@@ -132,15 +128,6 @@ public interface Service {
    
    public ArrayList<Gift_DTO> partlist(String part); 
    public void readcnt(int giftnum);//조회수   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    
