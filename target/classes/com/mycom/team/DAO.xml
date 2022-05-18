@@ -103,12 +103,10 @@
  insert into member values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
 </insert>
 
-
 <!-- best상품리스트 -->
 <select id="sanglist" resultType="com.mycom.team.Gift_DTO">
  select * from gift order by giftnum desc
 </select>
-
 
 <!-- best상품리스트 높은가격순 -->
 <select id="sangbestprice" resultType="com.mycom.team.Gift_DTO">
@@ -125,50 +123,37 @@
  select * from gift order by readcnt desc
 </select>
 
-
-
-
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftnum desc
 </select>
-
-
-
-
 
 <!-- part리스트 높은가격순 -->
 <select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftprice desc
 </select>
 
-
 <!-- part리스트 낮은가격순 -->
 <select id="sanglistpricedown" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftprice asc
 </select>
-
 
 <!-- part리스트 조회인기순 -->
 <select id="sanglistreadcnt" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by readcnt desc
 </select>
 
-
-
 <!-- 상품상세보기/주문 -->
 <select id="sangdetail" resultType="com.mycom.team.Gift_DTO" >
 select * from gift where giftnum = #{param1}
 </select>
 
-
-
-
-
 <!-- 조회수 -->
 <update id="readcnt">
 update gift set readcnt = readcnt +1 where giftnum = #{param1}
 </update>
+
+
 
 
 
