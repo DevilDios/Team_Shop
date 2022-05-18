@@ -10,8 +10,8 @@
 <style type="text/css">
 div.container-fluid{
 font-size: 20px;
-
 }
+
 
 
 </style>
