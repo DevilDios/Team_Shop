@@ -12,22 +12,25 @@
 <title>글 목록</title>
 
 </head>
-<body>
-	<table border="1" align = "center">
-		<tr>
-			<th>no</th>
-			<th>상품명</th>
-			<th>종류</th>
-			<th>썸네일이미지</th>
-			<th>가격</th>		
-			<th>S사이즈 재고</th>
-			<th>M사이즈 재고</th>
-			<th>L사이즈 재고</th>
-			<th>XL사이즈 재고</th>
-			<th>설명이미지</th>
-			<th>삭제</th>
-		</tr>
-			<c:forEach items="${list}" var="dto">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">상품번호(누르면 수정)</th>
+      <th scope="col">상품명</th>
+      <th scope="col">종류</th>
+      <th scope="col">썸네일이미지</th>
+      <th scope="col">가격</th>
+      <th scope="col">S사이즈 재고</th>
+      <th scope="col">M사이즈 재고</th>
+      <th scope="col">L사이즈 재고</th>
+      <th scope="col">XL사이즈 재고</th>
+      <th scope="col">설명이미지</th>
+      <th>삭제</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-dark">
+      <c:forEach items="${list}" var="dto">
 		<tr> 
 			<td><a href="gift_modify_form?giftnum=${dto.giftnum}">${dto.giftnum}</a></td> 
 			<td>${dto.gifttitle}</td> 
@@ -41,9 +44,8 @@
 			<td>${dto.giftimg}</td>
 			<td><a href="gift_delete?giftnum=${dto.giftnum}">삭제</a></td>  		
 		</tr>
-	</c:forEach>		
-	</table>
-	<br>
-	<a href="">글 쓰기</a>
-</body>
+	</c:forEach>
+    </tr>
+  </tbody>
+</table>
 </html>
