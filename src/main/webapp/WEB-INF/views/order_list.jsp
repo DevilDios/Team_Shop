@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,11 +51,7 @@
 
 
 
-
-
-
 <div class="container">
-  <h2>Bordered Table</h2>
   <p>The .table-bordered class adds borders to a table:</p>            
   <table class="table table-bordered">
     <thead>
@@ -70,6 +67,8 @@
     
     
 <c:forEach items="${oldto}" var="g">
+
+
 <tr> 
 <td style="text-align : center; vertical-align : middle;" width="150"><img src="${pageContext.request.contextPath}/image/${g.giftimg}" height="100"></td> 
 <td><strong>${g.gifttitle}</strong><hr>
@@ -80,11 +79,11 @@
 <c:if test="${g.orderl ne 0}" >L ${g.orderl}개</c:if>
 </div>
 <div style="float: right;">
-${g.giftprice}원&emsp;&emsp;
+<strong><fmt:formatNumber value="${g.giftprice}" type="number"/>원</strong>&emsp;&emsp;
 </div>
 </td> 
 <td style="text-align : center; vertical-align : middle;">
-<strong>${g.getTotalprice()}원</strong>
+<strong><fmt:formatNumber value="${g.getTotalprice()}" type="number"/>원</strong>
 </td>
 </tr>
 </c:forEach>
