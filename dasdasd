@@ -1,0 +1,477 @@
+[33mcommit 6c41c43eb693371410caa90f324103b77bde8d8b[m[33m ([m[1;36mHEAD -> [m[1;32mminho[m[33m)[m
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Wed May 18 11:50:34 2022 +0900
+
+    minho4 commit
+
+[33mcommit edf8e97074fe3ea73925e256fc487dfcf3e14050[m[33m ([m[1;31morigin/minho[m[33m)[m
+Merge: 4650690 1eca7dd
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Mon May 16 17:21:07 2022 +0900
+
+    minho3 com
+
+[33mcommit 1eca7dd7af6bafe979d3b0783b00dfa0e51c06a4[m
+Merge: 2eeb2d2 767bc8d
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Mon May 16 17:16:25 2022 +0900
+
+    Merge pull request #27 from DevilDios/seok
+    
+    seok 4 commit
+
+[33mcommit 46506901307d765a06236364a4b93319adc935a3[m
+Merge: 8e91b07 2eeb2d2
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Mon May 16 17:08:40 2022 +0900
+
+    Merge branch 'master' of https://github.com/DevilDios/Team_Shop into minho
+
+[33mcommit 8e91b07f31beceda8a2c3a02f507e9e68886ed77[m
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Mon May 16 17:08:16 2022 +0900
+
+    minho2 commit
+
+[33mcommit 767bc8d7ec52fe2972a071a2183b01e0c7ff4e75[m[33m ([m[1;31morigin/seok[m[33m)[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Mon May 16 17:04:40 2022 +0900
+
+    seok 4 commit
+
+[33mcommit 2eeb2d285229e43035f974074ab9f609daac20ed[m
+Merge: 91eaf36 1cb024c
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Fri May 13 18:02:59 2022 +0900
+
+    Merge pull request #26 from DevilDios/blossom
+    
+    blossom 16 commit
+
+[33mcommit 1cb024cfa5aad66bb39a330d0971f2bda77e5294[m[33m ([m[1;31morigin/blossom[m[33m)[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Fri May 13 18:02:21 2022 +0900
+
+    blossom 16 commit
+
+[33mcommit 91eaf368ccae91e6dad84b01f17ae8162cf2f2d5[m
+Merge: 13fda44 bfa87f6
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Fri May 13 17:59:14 2022 +0900
+
+    Merge pull request #25 from DevilDios/blossom
+    
+    Blossom
+
+[33mcommit bfa87f646d0f3191656a01e07b00e5a720dfd0b6[m
+Merge: 11d6910 13fda44
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Fri May 13 17:57:20 2022 +0900
+
+    blossom 15 commit
+
+[33mcommit 11d6910ff9b05a9dde7ce5fedb0a60881a4fec64[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Fri May 13 17:25:32 2022 +0900
+
+    blossom 15 commit
+
+[33mcommit 13fda443c1dd1f21b6bba9c1443c89ceb1bdb0ed[m
+Merge: 25a0654 6832a53
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Fri May 13 17:24:46 2022 +0900
+
+    Merge pull request #24 from DevilDios/seok
+    
+    Seok
+
+[33mcommit 6832a532523ae19b9a64d8d1a717f38099a9b5a9[m
+Merge: 8b75d2a 25a0654
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Fri May 13 17:21:13 2022 +0900
+
+    seok 3 commit
+
+[33mcommit 8b75d2a9019ed9c9d92f4e19b1a930c774469972[m
+Merge: 1ab6390 61fec98
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Fri May 13 10:08:22 2022 +0900
+
+    seok 3 commit
+
+[33mcommit 25a065498d96012a7f0e577835a9ea32eef4c569[m
+Merge: 61fec98 b255cb0
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Fri May 13 10:04:44 2022 +0900
+
+    Merge pull request #23 from DevilDios/blossom
+    
+    blossom 14 commit
+
+[33mcommit b255cb0aeaa87d889bd9b1f2e662bc2b50e362be[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Fri May 13 10:04:20 2022 +0900
+
+    blossom 14 commit
+
+[33mcommit 1ab639023f07e82c070bd7075ec20ead11334af1[m
+Merge: 86b7649 63a106f
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Thu May 12 19:17:21 2022 +0900
+
+    seok 1 com
+
+[33mcommit 61fec984f158ea835bf63a78e312cb9009cfaa31[m
+Merge: 63a106f 9ebd14c
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Thu May 12 19:11:24 2022 +0900
+
+    Merge pull request #22 from DevilDios/blossom
+    
+    Blossom
+
+[33mcommit 9ebd14cdbc7c5fb406cf7657215c0a545df7540f[m
+Merge: 49fe01b 63a106f
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Thu May 12 19:10:32 2022 +0900
+
+    blossom 13 commit
+
+[33mcommit 49fe01b1a92daa6332f9bc1be87386fa4604aff1[m
+Merge: e5cf714 86b7649
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Thu May 12 19:02:42 2022 +0900
+
+    blossom 12 commit
+
+[33mcommit 63a106f7f04d221d5ada5ee5315401fef2460356[m
+Merge: 3d79bed 9ae5eac
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Thu May 12 19:01:27 2022 +0900
+
+    Merge branch 'minho'
+
+[33mcommit 9ae5eacbe583ec39e69f3f902417bcb47c5a0fea[m
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Thu May 12 18:37:51 2022 +0900
+
+    Update managerheader.jsp
+
+[33mcommit 82bf81e12c60c29df70e1205d6bdfca1a930d128[m
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Thu May 12 18:36:09 2022 +0900
+
+    asdf
+    
+    asdf
+
+[33mcommit e5cf714682b4553dadb724e3970a712678a7b5eb[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Thu May 12 18:14:27 2022 +0900
+
+    blossom 11 commit
+
+[33mcommit 86b7649e3df3af68f4e41de6f05de47b96ed2519[m
+Merge: 3d79bed 8390f33
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Thu May 12 18:12:39 2022 +0900
+
+    Merge pull request #18 from DevilDios/seok
+    
+    Seok 1 commit
+
+[33mcommit 8390f33ca1aa191f4788d65bf0b08470df309496[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Thu May 12 18:11:37 2022 +0900
+
+    seok 1 commit
+
+[33mcommit 4b0411c0ec38a20bc1780262c70b9efdd4e8d003[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Thu May 12 18:02:12 2022 +0900
+
+    seok 1 commit
+
+[33mcommit eeb9af3219892f939d39206c1f018049ee081678[m
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Thu May 12 17:59:49 2022 +0900
+
+    minho1 commit
+
+[33mcommit 3d79bedc4a036160ba2c0ed41f91464b5caaca19[m
+Merge: ac91d7a be2ef1d
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Thu May 12 10:13:29 2022 +0900
+
+    Merge pull request #16 from DevilDios/blossom
+    
+    blossom 11 commit
+
+[33mcommit be2ef1db187ebbb8c09a8d6626dc5050b6111dfe[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Thu May 12 10:12:59 2022 +0900
+
+    blossom 11 commit
+
+[33mcommit ac91d7a691982184bebdb6cad9fd3e219f41b59a[m
+Merge: b98806b 79aecdd
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Thu May 12 10:09:51 2022 +0900
+
+    Merge pull request #15 from DevilDios/blossom
+    
+    blossom 10 commit
+
+[33mcommit 79aecdde53f7d3fd3fdaa307130420aa4949718a[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Thu May 12 10:08:40 2022 +0900
+
+    blossom 10 commit
+
+[33mcommit b98806b47dee892cca3ae1bcd4935e7726bd5fd8[m
+Author: replil <77562658+replil@users.noreply.github.com>
+Date:   Wed May 11 18:05:21 2022 +0900
+
+    test
+
+[33mcommit c14f84e7976348998db7d26fd86dd883a7948616[m
+Merge: bc35342 99c1464
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 17:05:57 2022 +0900
+
+    Merge pull request #14 from DevilDios/blossom
+    
+    Blossom
+
+[33mcommit 99c146494f2d153278fa19b249900a48c0955f68[m
+Merge: 53ab8e7 bc35342
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 17:02:11 2022 +0900
+
+    Merge branch 'master' of https://github.com/DevilDios/Team_Shop into blossom
+    asdfadfasdfasdf
+
+[33mcommit 53ab8e7810edc8410ab095cc329f818d80a64dd7[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 17:02:02 2022 +0900
+
+    blossom 9 commit
+
+[33mcommit bc3534298f1dc3e41363baecc5e5088440f59f92[m
+Merge: fa53cf9 c2112a1
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 16:55:44 2022 +0900
+
+    Merge pull request #13 from DevilDios/blossom
+    
+    Blossom
+
+[33mcommit c2112a10055a2c4ec21224f14749116f4c34e190[m
+Merge: 8f32cc4 fa53cf9
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 16:55:15 2022 +0900
+
+    blossom 8 commit
+
+[33mcommit 8f32cc4e99199d149bbfa343b7d8882e99b50901[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 16:50:59 2022 +0900
+
+    blossom 7 commit
+
+[33mcommit fa53cf9f1bec0d2ef5f99399afd0fd52a2183334[m
+Merge: 1ea9aa0 20e64fb
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 16:43:04 2022 +0900
+
+    Merge pull request #12 from DevilDios/seok
+    
+    seok 1 commit
+
+[33mcommit 20e64fbbbae5b1a647ccf740f7ca0c356466a163[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 16:40:46 2022 +0900
+
+    seok 1 commit
+
+[33mcommit 1ea9aa00a7f35e122e5e2cbdd5732f23a53bca5a[m
+Merge: 9d34caf 764a97a
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 15:43:19 2022 +0900
+
+    Merge pull request #11 from DevilDios/seok
+    
+    seok memberinput
+
+[33mcommit 764a97af076e1077d48b5f7ee8a932752c0d2a06[m
+Merge: fc19d0e 9d34caf
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 15:31:08 2022 +0900
+
+    seok
+
+[33mcommit fc19d0e546e03364ef8ae9d207c56debb96e1cc5[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 15:02:17 2022 +0900
+
+    seok memberinput
+
+[33mcommit 9d34caf547fbbf056e571f454c9d5e79b7604f6c[m
+Merge: 51b389d 45925a5
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 14:38:43 2022 +0900
+
+    Merge pull request #10 from DevilDios/blossom
+    
+    blossom 6 commit
+
+[33mcommit 45925a5c23ca2e2d364f4d30e90132fdb1e90dcf[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 14:38:21 2022 +0900
+
+    blossom 6 commit
+
+[33mcommit 51b389d35b0730bae31ef74bd12711c544ea200b[m
+Merge: f873064 8e22fa2
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:33:38 2022 +0900
+
+    Merge pull request #9 from DevilDios/blossom
+    
+    blossom 5 commit
+
+[33mcommit 8e22fa239678365e15c7792f6aa6b8729c4486da[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 13:33:06 2022 +0900
+
+    blossom 5 commit
+
+[33mcommit f8730648468bbb7949e37d203677f95b7d8d7aff[m
+Merge: 57c7889 666d64b
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:26:16 2022 +0900
+
+    Merge pull request #8 from DevilDios/blossom
+    
+    blossom 4 commit
+
+[33mcommit 666d64b30d8e2517ea027aacc91474b2edf896ba[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 13:25:33 2022 +0900
+
+    blossom 4 commit
+
+[33mcommit 57c788952d1e67f67f82305140a8d24c148e98f4[m
+Merge: 2c25f14 a1f4f7b
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:06:01 2022 +0900
+
+    Merge pull request #7 from DevilDios/blossom
+    
+    blossom second commit
+
+[33mcommit a1f4f7bdf4ee8036568ced70c5210aba316b0b49[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 13:05:12 2022 +0900
+
+    blossom second commit
+
+[33mcommit 2c25f14280460ded043e8cee7848579553442790[m
+Merge: 51df088 8824aba
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 13:01:22 2022 +0900
+
+    Merge pull request #6 from DevilDios/seok
+    
+    seok header
+
+[33mcommit 8824aba4cd0e057483d1a10d04eb24a8c8c5dcb0[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:59:19 2022 +0900
+
+    seok header
+
+[33mcommit 51df088ac588560e14e9e3727ca3482db17c1c67[m
+Merge: 289290b 3dfc6dd
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:39:02 2022 +0900
+
+    Merge pull request #5 from DevilDios/blossom
+    
+    blossom therd commit
+
+[33mcommit 3dfc6dd1f20a3b30305f7830dd73cddea060eecd[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 12:38:31 2022 +0900
+
+    blossom therd commit
+
+[33mcommit 289290b4e4f99840582bc31d72c5f1a5865a477f[m
+Merge: 96bab13 e7d3526
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:36:11 2022 +0900
+
+    Merge pull request #4 from DevilDios/blossom
+    
+    blossom second commit
+
+[33mcommit e7d35265748c23859e33a6b19b1a845939a1f53d[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 12:35:18 2022 +0900
+
+    blossom second commit
+
+[33mcommit 96bab130d0fce955a177c5c2d13ea7c0b6373177[m
+Merge: 5baa00a 99b4b14
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:32:07 2022 +0900
+
+    Merge pull request #3 from DevilDios/seok
+    
+    Seok
+
+[33mcommit 99b4b141b1e7d55b45440d4ccef4299e8de44b2c[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:29:15 2022 +0900
+
+    seokiiii
+
+[33mcommit 5bd374a6bcb47ac0b7ddcbc707b095c8ef20abef[m
+Merge: 7e74d2a 5baa00a
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:26:11 2022 +0900
+
+    Merge branch 'master' of https://github.com/DevilDios/Team_Shop into seok
+
+[33mcommit 5baa00a22e932706e0cfc05e7cc39c7889b02b01[m
+Merge: 65d5994 7427601
+Author: DevilDios <59993918+DevilDios@users.noreply.github.com>
+Date:   Wed May 11 12:25:48 2022 +0900
+
+    Merge pull request #2 from DevilDios/blossom
+    
+    blossom first commit
+
+[33mcommit 7427601a43616026c58d7670c2a67d24b4d277f5[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 12:25:05 2022 +0900
+
+    blossom first commit
+
+[33mcommit 7e74d2a16672a8c65b730069b3ae7fa75b8684d4[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:17:05 2022 +0900
+
+    seok firts
+
+[33mcommit 6d767d20b96ba1daaa4f933007d551d47329e62c[m
+Author: Youngseok Lee <myejrrp123@naver.com>
+Date:   Wed May 11 12:03:44 2022 +0900
+
+    seok-first
+
+[33mcommit 65d599451d0298edc2fa488a420772cc7474dd2d[m
+Author: seongwook cheon <blossom090315@naver.com>
+Date:   Wed May 11 03:53:29 2022 +0900
+
+    master first commit

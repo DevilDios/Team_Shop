@@ -196,18 +196,6 @@ public interface Service {
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
 //199 영석 끝   
 //200 민호 시작
    
@@ -294,11 +282,8 @@ public interface Service {
    
    
    
-   
-   
-  
-    
-   
+ 
+	
 //299 민호 끝 
 //300 성욱 시작
 	public ArrayList<Member_DTO> getMemSelectAll();
