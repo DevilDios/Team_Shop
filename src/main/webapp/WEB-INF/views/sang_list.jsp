@@ -35,8 +35,7 @@ text-align: center;
         </a>
       </div>
     </div>
-    
-    
+
     
     
 

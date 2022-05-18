@@ -30,11 +30,13 @@ public class BlossomController {
 	
 	//유저-회원정보수정
 	@RequestMapping(value = "/user_modify_update")
-	public String user_modify_update(Member_DTO dto)
+	public String user_modify_update(Member_DTO dto, Model model)
 	{
 		Service dao = sqlSession.getMapper(Service.class);
 		dao.setUserModify(dto.getId(), dto.getPw(), dto.getName(), dto.getTel(), dto.getEmail(), dto.getAddress());
-		return "redirect: index";
+		model.addAttribute("id",dto.getId());
+		model.addAttribute("pw",dto.getPw());
+		return "redirect: loginproc";
 	}
 	
 	//유저-회원탈퇴
@@ -118,7 +120,7 @@ public class BlossomController {
 	}
 			
 	//로그인처리
-	@RequestMapping(value = "/loginproc", method=RequestMethod.POST)
+	@RequestMapping(value = "/loginproc")
 	public String loginproc(HttpServletRequest request, RedirectAttributes res)
 	{	
 		String id=request.getParameter("id");
@@ -131,7 +133,7 @@ public class BlossomController {
 			HttpSession hs =request.getSession();
 			hs.setAttribute("loginmember", member);
 			hs.setAttribute("islogon", true);
-			return "login_succeed"; 
+			return "redirect: index"; 
 		}
 		else
 		{
