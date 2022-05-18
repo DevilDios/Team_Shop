@@ -199,11 +199,15 @@
 <!--199 영석 끝-->
 <!--200 민호 시작-->
 
-
-
-
-
-
+		<definition name="gift_list" extends="baseLayout">   
+			<put-attribute name="title" value="상품리스트"/>
+			<put-attribute name="content" value="/WEB-INF/views/gift_list.jsp" />
+		</definition>	
+		
+		<definition name="gift_modify_form" extends="baseLayout">   
+			<put-attribute name="title" value="상품등록"/>
+			<put-attribute name="content" value="/WEB-INF/views/gift_modify_form.jsp" />
+		</definition>	
 
 
 
