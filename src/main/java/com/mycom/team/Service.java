@@ -309,6 +309,8 @@ public interface Service {
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
 	public void setGiftOrder(String id, int giftnum, String orderstatus, int orders, int orderm, int orderl);
 	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
+	public void cartUserSet(String id, int giftnum, String giftstatus, int orders, int orderm, int orderl);
+	public ArrayList<Order_list_DTO> getCartListDTO(String id);
 
 	   
 	   

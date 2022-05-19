@@ -13,6 +13,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <%-- ↑↑↑부트스트랩 다른곳에서 추가no↑↑↑ --%>
 
+
+
 <title><tiles:insertAttribute name="title" /></title>
 </head>
 <body>
