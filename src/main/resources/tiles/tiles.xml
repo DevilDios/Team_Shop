@@ -23,10 +23,6 @@
 		<put-attribute name="content" value="/WEB-INF/views/member_input.jsp" />
 	</definition>
 
-	<definition name="gift_input" extends="baseLayout">   
-		<put-attribute name="title" value="상품등록"/>
-		<put-attribute name="content" value="/WEB-INF/views/gift_input.jsp" />
-	</definition>	
 	
 
 	
@@ -201,21 +197,21 @@
 
 		<definition name="gift_list" extends="baseLayout">   
 			<put-attribute name="title" value="상품리스트"/>
+			<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
 			<put-attribute name="content" value="/WEB-INF/views/gift_list.jsp" />
-		</definition>	
-		
+		</definition>
+
 		<definition name="gift_modify_form" extends="baseLayout">   
-			<put-attribute name="title" value="상품등록"/>
+			<put-attribute name="title" value="상품수정"/>
+			<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
 			<put-attribute name="content" value="/WEB-INF/views/gift_modify_form.jsp" />
+		</definition>
+
+		<definition name="gift_input" extends="baseLayout">   
+			<put-attribute name="title" value="상품등록"/>
+			<put-attribute name="header" value="/WEB-INF/views/manager_header.jsp" />
+			<put-attribute name="content" value="/WEB-INF/views/gift_input.jsp" />
 		</definition>	
-
-
-
-
-
-
-
-
 
 
 

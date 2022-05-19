@@ -16,6 +16,7 @@ div.container-fluid{
   	float: none;
 }
 
+
 </style>
 <title>Insert title here</title>
 </head>
@@ -48,7 +49,6 @@ div.container-fluid{
 <nav class="navbar navbar-inverse" >
   <div class="container-fluid" >
     <ul class="nav navbar-nav">
-
       <li><a href="gift_input">상품 등록&emsp;&emsp;&emsp;</a></li>
       <li><a href="gift_list">상품 관리&emsp;&emsp;&emsp;</a></li>
       <li><a href="#">매출액&emsp;&emsp;&emsp;</a></li>
