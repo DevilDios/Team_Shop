@@ -60,7 +60,6 @@
   <br>
   <input type="text" name="address" value="${loginmember.address}" class="form-control input-lg" placeholder="Address" />
   <br>
-  <input type="submit" value="수정">
   <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">수정</button>
   <button class="btn btn-lg btn-primary btn-block signup-btn" type="button" onclick="location.href='user_delete?id=${loginmember.id}'">회원탈퇴</button>
   </div>

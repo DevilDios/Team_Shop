@@ -161,7 +161,8 @@ public class BlossomController {
 		//Giftimg, gifttitle, orders, orderm, orderl, ordertotalprice
 		//데이터 전송해야함
 		//결제하기
-
+	
+		
 		/*
 		String gifttitle = request.getParameter("gifttitle");
 		int orders = Integer.parseInt(request.getParameter("orders"));
@@ -169,10 +170,6 @@ public class BlossomController {
 		int orderl = Integer.parseInt(request.getParameter("orderl"));
 		int ordertotalprice = Integer.parseInt(request.getParameter("sum"));
 		Service dao = sqlSession.getMapper(Service.class);
-
-		
-		mo.addAttribute(request);
-
 		*/
 		
 		return "order";
@@ -234,16 +231,15 @@ public class BlossomController {
 		return "cart_list";
 	}
 	
-//	@RequestMapping(value = "cart_delete")
-//	public String cart_delete(HttpServletRequest request)
-//	{
-//		String id = request.getParameter("id");
-//		int title = Integer.parseInt(request.getParameter("title"));
-//		Service dao = sqlSession.getMapper(Service.class);
-//		dao.cartDelete(id, title);		
-//		
-//		return "redirect: cart_list";
-//	}
+	@RequestMapping(value = "cart_delete")
+	public String cart_delete(HttpServletRequest request)
+	{
+		String id = ((Member_DTO)request.getSession().getAttribute("loginmember")).getId(); 
+		int giftnum = Integer.parseInt(request.getParameter("giftnum"));
+		Service dao = sqlSession.getMapper(Service.class);	
+		dao.cartDelete(id, giftnum);
+		return "redirect: cart_list";
+	}
 	
 	
 	

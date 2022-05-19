@@ -311,9 +311,7 @@ public interface Service {
 	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
 	public void cartUserSet(String id, int giftnum, String giftstatus, int orders, int orderm, int orderl);
 	public ArrayList<Order_list_DTO> getCartListDTO(String id);
-
-
-	//public void cartDelete(String id, int giftnum);
+	public void cartDelete(String id, int giftnum);
 
 	   
 	   

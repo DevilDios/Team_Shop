@@ -343,7 +343,7 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 </insert>
 
 <select id="getOrderListDTO" resultType="com.mycom.team.Order_list_DTO">
-	select A.orderstatus, A.orders, A.orderm, A.orderl, B.giftimg, B.gifttitle, B.giftprice
+	select A.giftnum, A.orderstatus, A.orders, A.orderm, A.orderl, B.giftimg, B.gifttitle, B.giftprice
 	from giftorder A inner join gift B
 	on A.giftnum = B.giftnum
 	where A.id = #{param1} and not A.orderstatus = 'cart'
@@ -361,11 +361,10 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 	where A.id = #{param1} and A.orderstatus = 'cart'
 </select>
 
-<!-- 
 <delete id="cartDelete">
-	delete from giftorder where id = #{param1} and giftnum = #{param2} and orderstatus = 'cart'
+	delete from giftorder where id = #{param1} and giftnum = ${param2} and orderstatus = 'cart'
 </delete>
- -->
+
 
 
 
