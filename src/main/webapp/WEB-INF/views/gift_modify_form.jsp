@@ -3,13 +3,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style type="text/css">
+div.giftmod{
+text-align: center;
+width: 400px;
+margin-left:auto; 
+margin-right:auto;
+}
+</style>
 <title>상품</title>
 </head>
 <body>
-	<h1>${dto.giftnum}상품 수정</h1>
+	<h1 align="center">${dto.giftnum} 상품 수정</h1>
+	
+	
 	<hr>
-	<form action="gift_modify" method="post" enctype="multipart/form-data" >
-		<table border="1">
+	<div class=giftmod align="center">
+	<form action="gift_modify" method="post" enctype="multipart/form-data">
+		<table class="table table-hover">
 			<tr>
 			<td>상품코드(수정불가)</td><td><input type="text" name = "giftnum" value = "${dto.giftnum}" readonly="readonly"></td>
 			</tr>
@@ -17,7 +28,7 @@
 			<td>상품명(필수)</td><td><input type="text" name = "gifttitle" value = "${dto.gifttitle}"></td>
 			</tr>
 			<tr>
-			<td>종류(반팔,맨투맨 이런것)</td><td><input type="text" name = "giftpart" value = "${dto.giftpart}"></td>
+			<td>상품 종류</td><td><input type="text" name = "giftpart" value = "${dto.giftpart}"></td>
 			</tr>
 			<tr>
 			<td>썸네일 이미지</td><td><input type="text" name = "gifttumimg" value = "${dto.gifttumimg}"></td>
@@ -45,6 +56,7 @@
 			</tr>
 		</table>
 	</form>
+	</div>
 	<hr>
 	<a href="index">메인화면</a>
 	
