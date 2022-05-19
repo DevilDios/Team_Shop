@@ -22,9 +22,6 @@ div.container-fluid{
 </head>
 <header>
 
-
-
-
 <%-- 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
