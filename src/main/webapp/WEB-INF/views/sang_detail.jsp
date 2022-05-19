@@ -18,6 +18,11 @@ li{
         left: 50%; 
         margin-left: 420px;
       }
+   select{
+
+text-align-last:center;
+
+}
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -85,7 +90,7 @@ function changeitem() {
  <div class="container container-table" >
    <div class="col-xl-6" style="text-align: center;">
    <form name="form" method="post" >
-  <table class="table table-hover" width="50%" align="center"  style="margin-left: auto; margin-right: auto;" >  
+  <table class="table table-hover text-center" width="50%" align="center"  style="text-align: center;" >  
         
       <tr> <td rowspan="9" style="text-align: center;"><img  src="${pageContext.request.contextPath}/image/${d.giftimg}" width="300" height="300">  </td></tr>
         
@@ -94,8 +99,10 @@ function changeitem() {
        <tr><th>배송비</th><td>2500원</td></tr>
        <tr><th>판매가</th><td>${d.giftprice}원</td></tr>
        
-       <tr><th>필수옵션</th><td>
-                              <select class="form-control"  name="giftsize" onchange="changeitem()" style=" width:150px;" >
+       <tr><th>필수옵션</th><td style="text-align-last:center;">
+                             <ul style="text-align-last:center;" >
+                              <select class="form-control"  name="giftsize" onchange="changeitem()" style=" width:150px; text-align-list:center;   " >
+					          </ul>
 					    <option value="">사이즈선택</option>
 					    <option value="S">S / ${d.giftprice} 원</option>
 					    <option value="M">M / ${d.giftprice} 원</option>
@@ -117,6 +124,7 @@ function changeitem() {
 				<p style="text-align: center;">
 				   <input type="button" value="장바구니" onclick="location.href='cart_userset'" class="btn btn-warning">
                  <input type="submit" value="바로구매" onclick="location.href='order?gifttitle=${d.gifttitle}'" class="btn btn-danger">
+                 
                 </p>
 			
           </td></tr>      
@@ -132,11 +140,12 @@ function changeitem() {
   </div>
  </div>
  <br>
-   <div id="myNavbar">
-        <ul class="nav nav-tabs centered">
-          <li><a href="#section1">상품상세보기</a></li>
-          <li><a href="#section2">배송/교환/환불안내</a></li>     
-        </ul>
+   <div class="container" >    
+        <table class="table table-hover" style="text-align: center;" >
+          <td><a  href="#section1">상품상세보기</a></td>        
+          <td><a href="#section2">배송/교환/환불안내</a></td>
+           <td><a href="#section4">상품문의</a></td>
+          </table>            
       </div>
     </div>
   </div>
@@ -148,16 +157,18 @@ function changeitem() {
   <div id="section2" class="container-fluid">
   
   </div>
-  <div class="collapse navbar-collapse" id="myNavbar" >
-        <ul class="nav nav-tabs centered">
-         <li><a href="#section1"> 상품상세보기</a></li>
-          <li><a href="#section2">배송/교환/환불안내</a></li>
-          <li><a href="#section3">맨위로</a></li>       
-        </ul>
+   <div class="container col-xl-6" >    
+        <table class="table table-hover te" >
+          <td><a  href="#section1">상품상세보기</a></td>        
+          <td><a href="#section2">배송/교환/환불안내</a></td>
+          <td><a href="#section3">맨위로</a></td>
+          </table>            
       </div>
  </div>
 </div>
-
+<div id="section4" class="container-fluid">
+  
+  </div>
 </c:forEach>
 	
 </body>

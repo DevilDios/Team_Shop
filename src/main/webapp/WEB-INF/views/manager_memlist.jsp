@@ -118,25 +118,6 @@ bootstrap try fail
 
 
 
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	
 <div class="container">          
   <table class="table table-hover">
