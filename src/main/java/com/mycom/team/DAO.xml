@@ -97,12 +97,6 @@
 
 
 
-
-
-
-
-
-
 <!--100 영석 시작-->
 <!-- 회원가입 -->
 <insert id="insert">
@@ -129,12 +123,10 @@
  select * from gift order by readcnt desc
 </select>
 
-
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
  select * from gift where giftpart = #{param1} order by giftnum desc
 </select>
-
 
 <!-- part리스트 높은가격순 -->
 <select id="sanglistprice" resultType="com.mycom.team.Gift_DTO">
@@ -258,6 +250,53 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--300 민호 시작-->
 <!--301 성욱 시작-->
 <select id="getMemSelectAll" resultType="com.mycom.team.Member_DTO">
@@ -307,11 +346,20 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 	select A.orderstatus, A.orders, A.orderm, A.orderl, B.giftimg, B.gifttitle, B.giftprice
 	from giftorder A inner join gift B
 	on A.giftnum = B.giftnum
-	where A.id = #{param1}
+	where A.id = #{param1} and not A.orderstatus = 'cart'
 </select>
 
+<insert id="cartUserSet">
+	insert into giftorder values(#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})
+</insert>
 
 
+<select id="getCartListDTO" resultType="com.mycom.team.Order_list_DTO">
+	select A.orders, A.orderm, A.orderl, B.giftimg, B.gifttitle, B.giftprice
+	from giftorder A inner join gift B
+	on A.giftnum = B.giftnum
+	where A.id=#{param1} and A.orderstatus = 'cart'
+</select>
 
 
 

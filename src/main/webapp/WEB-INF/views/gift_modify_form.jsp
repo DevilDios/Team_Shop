@@ -47,5 +47,7 @@
 	</form>
 	<hr>
 	<a href="index">메인화면</a>
+	
+	
 </body>
 </html>

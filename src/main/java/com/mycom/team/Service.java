@@ -93,6 +93,9 @@ public interface Service {
   
    
    
+	
+	
+	
    
 //100 영석 시작   
 	public void insert(String id,String pw,String name,String tel,String email,String address);
@@ -125,21 +128,6 @@ public interface Service {
    
    public ArrayList<Gift_DTO> partlist(String part); 
    public void readcnt(int giftnum);//조회수   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    
@@ -294,11 +282,20 @@ public interface Service {
    
    
    
-   
-   
-  
-    
-   
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 //299 민호 끝 
 //300 성욱 시작
 	public ArrayList<Member_DTO> getMemSelectAll();
@@ -312,6 +309,8 @@ public interface Service {
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
 	public void setGiftOrder(String id, int giftnum, String orderstatus, int orders, int orderm, int orderl);
 	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
+	public void cartUserSet(String id, int giftnum, String giftstatus, int orders, int orderm, int orderl);
+	public ArrayList<Order_list_DTO> getCartListDTO(String id);
 
 	   
 	   

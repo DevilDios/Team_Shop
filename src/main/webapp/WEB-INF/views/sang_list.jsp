@@ -35,7 +35,7 @@ background: none;
  
 
 <div class="container" >
-  <h2 style="text-align: center;"> LIST </h2><br>
+  
   <div class="row col-xl-6" >
   
   <nav class="navbar navbar-default" style="text-align: right" >
@@ -63,8 +63,7 @@ background: none;
         </a>
       </div>
     </div>
-    
-    
+
     
     
 

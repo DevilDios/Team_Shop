@@ -51,8 +51,7 @@
 
 
 
-<div class="container">
-  <p>The .table-bordered class adds borders to a table:</p>            
+<div class="container">            
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -62,16 +61,19 @@
       </tr>
     </thead>
     <tbody>
-    
-    
-    
-    
 <c:forEach items="${oldto}" var="g">
-
-
 <tr> 
 <td style="text-align : center; vertical-align : middle;" width="150"><img src="${pageContext.request.contextPath}/image/${g.giftimg}" height="100"></td> 
-<td><strong>${g.gifttitle}</strong><hr>
+<td>
+<br>
+<div style=" float: left;"> 
+<strong>&emsp;${g.gifttitle}</strong>
+</div>
+<div style=" float: right;">
+<strong>${g.orderstatus}&emsp;</strong>
+</div>
+<br>
+<hr>
 <div style=" float: left;">
 &emsp;
 <c:if test="${g.orders ne 0}" >S ${g.orders}개</c:if><c:if test="${g.orders ne 0 and g.orderm ne 0 and g.orderl ne 0}" >,&emsp;</c:if>
@@ -82,7 +84,7 @@
 <strong><fmt:formatNumber value="${g.giftprice}" type="number"/>원</strong>&emsp;&emsp;
 </div>
 </td> 
-<td style="text-align : center; vertical-align : middle;">
+<td style="text-align : center; vertical-align : middle; width: 200px;">
 <strong><fmt:formatNumber value="${g.getTotalprice()}" type="number"/>원</strong>
 </td>
 </tr>

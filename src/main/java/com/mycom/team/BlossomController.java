@@ -30,11 +30,13 @@ public class BlossomController {
 	
 	//유저-회원정보수정
 	@RequestMapping(value = "/user_modify_update")
-	public String user_modify_update(Member_DTO dto)
+	public String user_modify_update(Member_DTO dto, Model model)
 	{
 		Service dao = sqlSession.getMapper(Service.class);
 		dao.setUserModify(dto.getId(), dto.getPw(), dto.getName(), dto.getTel(), dto.getEmail(), dto.getAddress());
-		return "redirect: index";
+		model.addAttribute("id",dto.getId());
+		model.addAttribute("pw",dto.getPw());
+		return "redirect: loginproc";
 	}
 	
 	//유저-회원탈퇴
@@ -118,7 +120,7 @@ public class BlossomController {
 	}
 			
 	//로그인처리
-	@RequestMapping(value = "/loginproc", method=RequestMethod.POST)
+	@RequestMapping(value = "/loginproc")
 	public String loginproc(HttpServletRequest request, RedirectAttributes res)
 	{	
 		String id=request.getParameter("id");
@@ -131,7 +133,7 @@ public class BlossomController {
 			HttpSession hs =request.getSession();
 			hs.setAttribute("loginmember", member);
 			hs.setAttribute("islogon", true);
-			return "login_succeed"; 
+			return "redirect: index"; 
 		}
 		else
 		{
@@ -159,7 +161,7 @@ public class BlossomController {
 		//Giftimg, gifttitle, orders, orderm, orderl, ordertotalprice
 		//데이터 전송해야함
 		//결제하기
-        
+
 		/*
 		String gifttitle = request.getParameter("gifttitle");
 		int orders = Integer.parseInt(request.getParameter("orders"));
@@ -167,8 +169,10 @@ public class BlossomController {
 		int orderl = Integer.parseInt(request.getParameter("orderl"));
 		int ordertotalprice = Integer.parseInt(request.getParameter("sum"));
 		Service dao = sqlSession.getMapper(Service.class);
+
 		
 		mo.addAttribute(request);
+
 		*/
 		
 		return "order";
@@ -201,9 +205,61 @@ public class BlossomController {
 		model.addAttribute("oldto", oldto);
 		return "order_list";
 	}
+		
+	@RequestMapping(value = "/cart_userset")
+	public String cart_userset(HttpServletRequest request)
+	{
+		
+		
+		String id = request.getParameter("id");
+		int giftnum = Integer.parseInt(request.getParameter("giftnum"));
+		String giftstatus = "cart";
+		int orders = Integer.parseInt(request.getParameter("orders"));
+		int orderm = Integer.parseInt(request.getParameter("orderm"));
+		int orderl = Integer.parseInt(request.getParameter("orderl"));
+		
+		Service dao = sqlSession.getMapper(Service.class);
+		dao.cartUserSet(id, giftnum, giftstatus, orders, orderm, orderl);
+		
+		return "#";
+	}
 	
-
+	public String cart_list(HttpServletRequest request, Model model)
+	{
+		Service dao = sqlSession.getMapper(Service.class);
+		String id = ((Member_DTO)request.getSession().getAttribute("loginmember")).getId(); 
+		ArrayList<Order_list_DTO> oldto = dao.getCartListDTO(id);
+		model.addAttribute("oldto", oldto);		
+		return "cart_list";
+	}
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
