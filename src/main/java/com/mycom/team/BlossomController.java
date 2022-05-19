@@ -214,13 +214,14 @@ public class BlossomController {
 		int orders = Integer.parseInt(request.getParameter("orders"));
 		int orderm = Integer.parseInt(request.getParameter("orderm"));
 		int orderl = Integer.parseInt(request.getParameter("orderl"));
-		
+
 		Service dao = sqlSession.getMapper(Service.class);
 		dao.cartUserSet(id, giftnum, giftstatus, orders, orderm, orderl);
 		
-		return "#";
+		return "cart_list";
 	}
 	
+	@RequestMapping(value = "/cart_list")
 	public String cart_list(HttpServletRequest request, Model model)
 	{
 		Service dao = sqlSession.getMapper(Service.class);
@@ -229,6 +230,29 @@ public class BlossomController {
 		model.addAttribute("oldto", oldto);		
 		return "cart_list";
 	}
+	
+//	@RequestMapping(value = "cart_delete")
+//	public String cart_delete(HttpServletRequest request)
+//	{
+//		String id = request.getParameter("id");
+//		int title = Integer.parseInt(request.getParameter("title"));
+//		Service dao = sqlSession.getMapper(Service.class);
+//		dao.cartDelete(id, title);		
+//		
+//		return "redirect: cart_list";
+//	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
