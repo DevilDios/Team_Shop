@@ -117,6 +117,7 @@ function changeitem() {
 				<p style="text-align: center;">
 				   <input type="button" value="장바구니" onclick="location.href='#'" class="btn btn-warning">
                  <input type="submit" value="바로구매" onclick="location.href='order?gifttitle=${d.gifttitle}'" class="btn btn-danger">
+                 
                 </p>
 			
           </td></tr>      
