@@ -5,11 +5,27 @@
 <html>
 <head>
 <style type="text/css">
+p {
+text-align: center;
+}
 li {
 text-align: right;
 }
 div{
+border-right:none;
+
+border-left:none;
+
+border-top:none;
+
+border-bottom:none;
+
+}
+a
+{
+padding: 0;
 border: none;
+background: none;
 }
 </style>
 <meta charset="UTF-8">
@@ -18,9 +34,9 @@ border: none;
 <body>
  
 
-<div class="container-sm" >
-  <h2 style="text-align: center;"> LIST </h2><br>
-  <div class="row" >
+<div class="container" >
+  
+  <div class="row col-xl-6" >
   
   <nav class="navbar navbar-default" style="text-align: right" >
     <div class="container-fluid navbar-right" style="text-align: right">
@@ -36,8 +52,8 @@ border: none;
    </div>
    </nav>
    <c:forEach items="${list}" var="s">
-    <div class="col-md-2" style="border:none">
-      <div class="thumbnail">
+    <div class="col-md-3" >
+      <div class="thumbnail" style="border:none">
         <a href="sangdetail?giftnum=${s.giftnum}" target="_self" >
           <img  src="${pageContext.request.contextPath}/image/${s.giftimg}" class="img-responsive" style="width:200px; height: 200px;">
           <div class="caption">
