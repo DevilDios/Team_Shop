@@ -115,7 +115,7 @@ function changeitem() {
 				총금액 : <input type="text" name="sum" size="4" readonly style="border:none"  >원<br>
 				<br>
 				<p style="text-align: center;">
-				   <input type="button" value="장바구니" onclick="location.href='#'" class="btn btn-warning">
+				   <input type="button" value="장바구니" onclick="location.href='cart_userset'" class="btn btn-warning">
                  <input type="submit" value="바로구매" onclick="location.href='order?gifttitle=${d.gifttitle}'" class="btn btn-danger">
                 </p>
 			

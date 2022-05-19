@@ -12,20 +12,24 @@
 <title>글 목록</title>
 
 </head>
+
+<h1 align="center">상품 관리</h1>
+<body>
+<div class="container">
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">상품번호(누르면 수정)</th>
-      <th scope="col">상품명</th>
-      <th scope="col">종류</th>
-      <th scope="col">썸네일이미지</th>
-      <th scope="col">가격</th>
-      <th scope="col">S사이즈 재고</th>
-      <th scope="col">M사이즈 재고</th>
-      <th scope="col">L사이즈 재고</th>
-      <th scope="col">XL사이즈 재고</th>
-      <th scope="col">설명이미지</th>
-      <th>삭제</th> 
+      <th scope="col" width="300" align="center">상품번호<br>(누르면 수정)</th>
+      <th scope="col" width="100">상품명</th>
+      <th scope="col" width="100">종류</th>
+      <th scope="col" width="200">썸네일이미지</th>
+      <th scope="col" width="100">가격</th>
+      <th scope="col" width="200">S사이즈 재고</th>
+      <th scope="col" width="200">M사이즈 재고</th>
+      <th scope="col" width="200">L사이즈 재고</th>
+      <th scope="col" width="200">XL사이즈 재고</th>
+      <th scope="col" width="200">설명이미지</th>
+      <th scope="col" width="100">삭제</th> 
     </tr>
   </thead>
   <tbody>
@@ -48,4 +52,7 @@
     </tr>
   </tbody>
 </table>
+</div>
+
+</body>
 </html>

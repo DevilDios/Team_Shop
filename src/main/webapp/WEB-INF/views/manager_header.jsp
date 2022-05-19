@@ -6,17 +6,26 @@
 <meta charset="UTF-8">
 <style type="text/css">
 div.container-fluid{
-font-size: 20px;
+ 	text-align: center;
+	font-size: 20px;
 }
-
+.navbar .navbar-nav {
+	text-align: center;
+  	display: inline-block;
+  	vertical-align: bottom;
+  	float: none;
+}
 
 
 </style>
 <title>Insert title here</title>
 </head>
-<body>
+<header>
 
 
+
+
+<%-- 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
@@ -38,5 +47,23 @@ font-size: 20px;
     </ul>
   </div>
 </nav>
-</body>
+--%>
+
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid" >
+    <ul class="nav navbar-nav">
+      <li><a href="gift_input">상품 등록&emsp;&emsp;&emsp;</a></li>
+      <li><a href="gift_list">상품 관리&emsp;&emsp;&emsp;</a></li>
+      <li><a href="#">매출액&emsp;&emsp;&emsp;</a></li>
+      <li><a href="manager_memlist">회원 관리&emsp;&emsp;&emsp;</a></li>
+      <li><a href="index">Home&emsp;&emsp;&emsp;</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+</header>
 </html>

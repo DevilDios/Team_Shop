@@ -34,7 +34,7 @@
 							<li class="active"><a href="user_modify_form">< ${loginmember.name} 님 ></a></li>
 			      <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span>  로그아웃</a></li>
 				  <li><a href="order_list"><span class="glyphicon glyphicon-road"></span>  주문조회</a></li>
-			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>  장바구니</a></li>
+			      <li><a href="cart_list"><span class="glyphicon glyphicon-shopping-cart"></span>  장바구니</a></li>
 			</c:when>
 			<c:otherwise>
 			      <li><a href="loginform"><span class="glyphicon glyphicon-log-in"></span>  로그인</a></li>

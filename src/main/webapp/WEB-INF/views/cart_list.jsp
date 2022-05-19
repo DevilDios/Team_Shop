@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 style="text-align: center;">관리자 페이지</h1>
-<div style="text-align: center;">
-<img src="${pageContext.request.contextPath}/image/m-404.jpeg" width="400">
-</div>
+
 </body>
 </html>
