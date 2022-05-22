@@ -31,7 +31,7 @@
 <strong>&emsp;${g.gifttitle}</strong>
 </div>
 <div style=" float: right;">
-<button type="button" class="btn btn-default btn-sm" onclick="location.href='cart_delete??id=${loginmember.id}&title=${g.gifttitle}'">X</button>
+<button type="button" class="btn btn-default btn-sm" onclick="location.href='cart_delete?giftnum=${g.giftnum}'">X</button>
 </div>
 <br>
 <hr>

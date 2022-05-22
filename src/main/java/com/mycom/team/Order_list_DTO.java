@@ -2,17 +2,19 @@ package com.mycom.team;
 
 public class Order_list_DTO {
 	
+	int giftnum;
 	String orderstatus;
 	int orders, orderm, orderl;
 	String giftimg, gifttitle;
 	int giftprice;
-
 	public Order_list_DTO() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public Order_list_DTO(String orderstatus, int orders, int orderm, int orderl, String giftimg, String gifttitle,
-			int giftprice) {
+	public Order_list_DTO(int giftnum, String orderstatus, int orders, int orderm, int orderl, String giftimg,
+			String gifttitle, int giftprice) {
 		super();
+		this.giftnum = giftnum;
 		this.orderstatus = orderstatus;
 		this.orders = orders;
 		this.orderm = orderm;
@@ -20,6 +22,13 @@ public class Order_list_DTO {
 		this.giftimg = giftimg;
 		this.gifttitle = gifttitle;
 		this.giftprice = giftprice;
+	}
+	
+	public int getGiftnum() {
+		return giftnum;
+	}
+	public void setGiftnum(int giftnum) {
+		this.giftnum = giftnum;
 	}
 	public String getOrderstatus() {
 		return orderstatus;

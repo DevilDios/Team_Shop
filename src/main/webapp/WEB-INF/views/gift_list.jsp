@@ -14,6 +14,7 @@
 </head>
 
 <h1 align="center">상품 관리</h1>
+
 <body>
 <div class="container">
 <table class="table table-hover">
@@ -29,7 +30,7 @@
       <th scope="col" width="200">L사이즈 재고</th>
       <th scope="col" width="200">XL사이즈 재고</th>
       <th scope="col" width="200">설명이미지</th>
-      <th scope="col" width="100">삭제</th> 
+      <th scope="col" width="100"></th> 
     </tr>
   </thead>
   <tbody>
@@ -53,6 +54,21 @@
   </tbody>
 </table>
 </div>
-
+ <ul class="paging">
+    <c:if test="${paging.prev}">
+        <span><a href='<c:url value="/gift_list?page=${paging.startPage-1}"/>'>이전</a></span>
+    </c:if>
+    <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="num">
+        <span><a href='<c:url value="/gift_list?page=${num}"/>'>${num}</a></span>
+    </c:forEach>
+    <c:if test="${paging.next && paging.endPage>0}">
+        <span><a href='<c:url value="/gift_list?page=${paging.endPage+1}"/>'>다음</a></span>
+    </c:if>
+</ul> 
 </body>
 </html>
+
+
+
+
+

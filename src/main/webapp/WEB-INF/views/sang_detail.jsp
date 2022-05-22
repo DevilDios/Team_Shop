@@ -132,6 +132,51 @@ function changeitem() {
        
   </table>
  
+ 
+<%-- #######################################################################################################################  --%>
+<div style=" padding-left:670px;">
+	<script type="text/javascript" src="//pay.naver.com/customer/js/naverPayButton.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function NPayBuy() {
+			var pcode = 'R1835-R7174-L0812';
+			var _type = 'view';
+			if( !( $("#option_select_cnt").val() * 1 > 0 ) ) {
+				alert("옵션을 하나 이상 선택해주시기 바랍니다.")
+			}
+			else if( !( $("#option_select_expricesum").val() * 1 > 0 ) ) {
+				alert("옵션 합계금액이 0원을 초과해야 합니다.")
+			}
+			else {
+				location.href = ('/addons/npay/shop.order.result_npay.pro.php?mode=add&pcode='+pcode+'&pass_type=' + _type + '&option_select_cnt=' + $("#option_select_cnt").val());
+				//var LocationUrl = '/addons/npay/shop.order.result_npay.pro.php?mode=add&pcode='+pcode+'&pass_type=' + _type + '&option_select_cnt=' + $("#option_select_cnt").val();
+				//window.open(LocationUrl, '', "scrollbars=yes, width=1200, height=500");
+			}
+		}
+		
+		function NPayWish() {
+			var pcode = 'R1835-R7174-L0812';
+			var _type = 'wish';
+			var LocationUrl = '/addons/npay/shop.order.result_npay.pro.php?mode=add&pcode='+pcode+'&pass_type=' + _type + '&option_select_cnt=' + $("#option_select_cnt").val();
+			window.open(LocationUrl, '', "scrollbars=yes, width=400, height=267");
+			return false;
+		}
+
+		naver.NaverPayButton.apply({
+		BUTTON_KEY: "#", 
+		TYPE: "A",
+		COLOR: 1, 
+		COUNT: 2, 
+		ENABLE: "Y", 
+		BUY_BUTTON_HANDLER: NPayBuy, 
+		WISHLIST_BUTTON_HANDLER: NPayWish, 
+		"":"",
+		});
+	</script>
+</div>																
+<%-- #######################################################################################################################  --%>
+
+
+ 
 		</form>
   <br>
   <div style="text-align: center;">
