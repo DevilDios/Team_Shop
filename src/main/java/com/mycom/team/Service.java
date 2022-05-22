@@ -125,11 +125,11 @@ public interface Service {
    
    public ArrayList<Gift_DTO> sangdetail(int giftnum); //상품상세보기
   
-   
    public ArrayList<Gift_DTO> partlist(String part); 
    public void readcnt(int giftnum);//조회수   
    
-   
+   int cntNo();
+	public ArrayList<Gift_DTO> selectNo(PageVO vo);
    
    
    

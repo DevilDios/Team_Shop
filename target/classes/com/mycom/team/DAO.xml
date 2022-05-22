@@ -125,7 +125,11 @@
 
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
- select * from gift where giftpart = #{param1} order by giftnum desc
+SELECT  * FROM (
+		select rownum rn, A.* from(  
+			select giftnum,giftimg,gifttitle,giftprice,giftpart from gift where giftpart = #{param1} ORDER BY giftnum DESC,giftprice asc)A)
+	WHERE rn BETWEEN #{start} AND #{end}
+  
 </select>
 
 <!-- part리스트 높은가격순 -->
@@ -153,8 +157,16 @@ select * from gift where giftnum = #{param1}
 update gift set readcnt = readcnt +1 where giftnum = #{param1}
 </update>
 
+<select id="cntNo" resultType="int">
+	SELECT COUNT(*) FROM gift <!-- count(*)는 테이블안에 있는 전체 행 개수를 집합 몇개인지 반환한다. -->
+</select>
 
-
+<select id="selectNo" resultType="com.mycom.team.Gift_DTO">
+	SELECT  * FROM (
+		select rownum rn, A.* from(  
+			select giftnum,giftimg,gifttitle,giftprice from gift ORDER BY giftnum DESC,gifttitle asc)A)
+	WHERE rn BETWEEN #{start} AND #{end}
+</select>
 
 
 
