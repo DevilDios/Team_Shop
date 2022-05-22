@@ -49,17 +49,14 @@ div.container-fluid{
 <nav class="navbar navbar-inverse" >
   <div class="container-fluid" >
     <ul class="nav navbar-nav">
-      <li><a href="gift_input">상품 등록&emsp;&emsp;&emsp;</a></li>
-      <li><a href="gift_list">상품 관리&emsp;&emsp;&emsp;</a></li>
-      <li><a href="#">매출액&emsp;&emsp;&emsp;</a></li>
-      <li><a href="manager_memlist">회원 관리&emsp;&emsp;&emsp;</a></li>
-      <li><a href="index">Home&emsp;&emsp;&emsp;</a></li>
+      <li><a href="gift_input"><span class="glyphicon glyphicon-pencil"></span>  상품 등록&emsp;&emsp;&emsp;</a></li>
+      <li><a href="gift_list"><span class="glyphicon glyphicon-list-alt"></span>  상품 관리&emsp;&emsp;&emsp;</a></li>
+      <li><a href="manager_memlist"><span class="glyphicon glyphicon-user"></span>  회원 관리&emsp;&emsp;&emsp;</a></li>
+      <li><a href="managerindex"><span class="glyphicon glyphicon-wrench"></span>  관리자 페이지로&emsp;&emsp;&emsp;</a></li>
+      <li><a href="index"><span class="glyphicon glyphicon-home"></span>홈화면으로&emsp;&emsp;&emsp;</a></li>
     </ul>
   </div>
 </nav>
-
-
-
 
 
 </header>

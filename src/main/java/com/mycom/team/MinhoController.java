@@ -2,13 +2,16 @@ package com.mycom.team;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -49,8 +52,12 @@ public class MinhoController {
 		
 		//상품 목록 보기
 		@RequestMapping("/gift_list")
-		public String getGiftList(Model mo) {
-			
+		public String getGiftList(Gift_DTO dto,Model mo,HttpServletRequest request) {
+	       
+			Paging paging = new Paging();
+	        paging.setCri(dto);
+	        paging.setTotalCount(151); // 리스트 총갯수 (디비에서 count(*) 가지고 와야 함)
+	        request.setAttribute("paging", paging);
 			Service dao = sqlSession.getMapper(Service.class);
 			ArrayList<Gift_DTO> list = dao.sanglist();		
 			mo.addAttribute("list", list);		
@@ -89,8 +96,7 @@ public class MinhoController {
 			return "redirect:managerindex";	
 		}
 		
-		
-		
+	    
 		
 		
 		

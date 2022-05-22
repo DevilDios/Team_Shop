@@ -14,8 +14,9 @@ margin-right:auto;
 <title>상품</title>
 </head>
 <body>
+
+
 	<h1 align="center">${dto.giftnum} 상품 수정</h1>
-	
 	
 	<hr>
 	<div class=giftmod align="center">
@@ -34,25 +35,25 @@ margin-right:auto;
 			<td>썸네일 이미지</td><td><input type="text" name = "gifttumimg" value = "${dto.gifttumimg}"></td>
 			</tr>
 			<tr>
-			<td>가격</td><td><input type="text" name = "giftprice" value = "${dto.giftprice}"></td>
+			<td>가격</td><td><input type="text" name = "giftprice" value = "${dto.giftprice}" pattern="[0-9]+"></td>
 			</tr>
 			<tr>
-			<td>S사이즈재고</td><td><input type="text" name = "giftstocks" value = "${dto.giftstocks}"></td>
+			<td>S사이즈재고</td><td><input type="text" name = "giftstocks" value = "${dto.giftstocks}" pattern="[0-9]+"></td>
 			</tr>
 			<tr>
-			<td>M사이즈재고</td><td><input type="text" name = "giftstockm" value = "${dto.giftstockm}"></td>
+			<td>M사이즈재고</td><td><input type="text" name = "giftstockm" value = "${dto.giftstockm}" pattern="[0-9]+"></td>
 			</tr>
 			<tr>
-			<td>L사이즈재고</td><td><input type="text" name = "giftstockl" value = "${dto.giftstockl}"></td>
+			<td>L사이즈재고</td><td><input type="text" name = "giftstockl" value = "${dto.giftstockl}" pattern="[0-9]+"></td>
 			</tr>
 			<tr>
-			<td>XL사이즈재고</td><td><input type="text" name = "giftstockxl" value = "${dto.giftstockxl}"></td>
+			<td>XL사이즈재고</td><td><input type="text" name = "giftstockxl" value = "${dto.giftstockxl}" pattern="[0-9]+"></td>
 			</tr>
 			<tr>
 			<td>설명 이미지 추가</td><td><input type="text" name = "giftimg" value = "${dto.giftimg}"></td>
 			</tr>
 			<tr>
-			<td colspan="2" align="center"><input type="submit" value="등록하기" /></td>
+			<td colspan="2" align="center"><input type="submit" value="등록하기"/></td>
 			</tr>
 		</table>
 	</form>

@@ -2,7 +2,7 @@ package com.mycom.team;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class Gift_DTO {
+public class Gift_DTO extends Criteria{
 
 
 	int giftnum,giftstocks,giftstockm,giftstockl,giftstockxl,giftprice,readcnt;

@@ -214,12 +214,6 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 		update gift set gifttitle=#{param2}, giftpart=#{param3}, gifttumimg=#{param4}, giftprice=#{param5}, giftstocks=#{param6},
 		giftstockm=#{param7},giftstockl=#{param8},giftstockxl=#{param9},giftimg=#{param10},readcnt=#{param11} where giftnum=#{param1}
 	</update>
-	
-
-	
-
-
-
 
 
 
