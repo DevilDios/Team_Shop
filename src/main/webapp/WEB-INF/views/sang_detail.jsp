@@ -101,7 +101,7 @@ function changeitem() {
        
        <tr><th>필수옵션</th><td style="text-align-last:center;">
                              <ul style="text-align-last:center;" >
-                              <select class="form-control"  name="giftsize" onchange="changeitem()" style=" width:150px; text-align-list:center;   " >
+                              <select class="form-control"  name="giftsize" onchange="changeitem()" style=" width:150px; text-align-list:center;" >
 					          </ul>
 					    <option value="">사이즈선택</option>
 					    <option value="S">S / ${d.giftprice} 원</option>

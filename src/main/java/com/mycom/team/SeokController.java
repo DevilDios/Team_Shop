@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -70,11 +71,15 @@ public class SeokController {
 	
 	//part리스트
 		@RequestMapping(value="/partlist")
-		public String ko33(HttpServletRequest request, Model mo)
+		public String ko33(HttpServletRequest request, Model model,PageVO vo
+				, @RequestParam(value="nowPage", required=false)String nowPage
+				, @RequestParam(value="cntPerPage", required=false)String cntPerPage) 
 		{  
 			ArrayList<Gift_DTO> list =null;
-			Service dao = sqlSession.getMapper(Service.class);	
-			String part = request.getParameter("part");
+			Service dao = sqlSession.getMapper(Service.class);
+			String part = request.getParameter("part");	
+			dao.partlist(part);
+			
 			if(part.equals("best"))
 			{
 			 list  = dao.sanglist();
@@ -84,8 +89,24 @@ public class SeokController {
 			  list  = dao.partlist(part);
 			}
 			
-			mo.addAttribute("list", list);
-			mo.addAttribute("part",part);
+												
+			int total = dao.cntNo();//count 테이블 안에 전체 행 개수 반환
+			
+			if (nowPage == null && cntPerPage == null) {
+				nowPage = "1";
+				cntPerPage = "12";
+			} else if (nowPage == null) {
+				nowPage = "1";
+			} else if (cntPerPage == null) { 
+				cntPerPage = "12";
+			}
+			
+			vo = new PageVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+			
+			model.addAttribute("list", list);
+			model.addAttribute("part",part);
+			model.addAttribute("paginga", vo);
+			model.addAttribute("viewAlla", dao.selectNo(vo));
 			return "sang_list";	
 		}
 			
@@ -151,17 +172,38 @@ public class SeokController {
 		return "sang_list";		
 		}
 
-		
-		
-		
-		
     //조회수
 		public void readcnt(int giftnum)
 		{
 			Service dao = sqlSession.getMapper(Service.class);
 			dao.readcnt(giftnum);
 		}
-		
-	
+		// 상품 페이징
+		@RequestMapping("/sang_list")
+		public String noticeListt(PageVO vo, Model model
+				, @RequestParam(value="nowPage", required=false)String nowPage
+				, @RequestParam(value="cntPerPage", required=false)String cntPerPage) 
+		{
+			
+			Service dao = sqlSession.getMapper(Service.class);	
+			ArrayList<Gift_DTO> list  = dao.sanglist();										
+			int total = dao.cntNo();//count 테이블 안에 전체 행 개수 반환
+			
+			if (nowPage == null && cntPerPage == null) {
+				nowPage = "1";
+				cntPerPage = "12";
+			} else if (nowPage == null) {
+				nowPage = "1";
+			} else if (cntPerPage == null) { 
+				cntPerPage = "12";
+			}
+			
+			vo = new PageVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+			model.addAttribute("paginga", vo);
+			model.addAttribute("viewAlla", dao.selectNo(vo));
+			
+			
+			return "sang_list";
+		}
 	
 }
