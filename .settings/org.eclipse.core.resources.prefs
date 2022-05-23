@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//src/main/java/com/mycom/team/SeokController.java=UTF-8
 encoding//src/main/java/com/mycom/team/Service.java=UTF-8
+=======
+encoding//src/main/java/com/mycom/team/MinhoController.java=UTF-8
+>>>>>>> 625c9c1274645dbb0f1a83d874e4eac5f392f8eb
 encoding//src/main/webapp/WEB-INF/views/dbdb.jsp=UTF-8
