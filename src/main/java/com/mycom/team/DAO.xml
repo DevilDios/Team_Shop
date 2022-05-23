@@ -211,7 +211,7 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 <!--199 영석 끝-->
 <!--200 민호 시작-->
 	<select id="GiftInsert">
-		insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10},#{param11})
+		insert into gift values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10},#{param11})
 	</select>
 
 	<delete id="GiftDelete">
