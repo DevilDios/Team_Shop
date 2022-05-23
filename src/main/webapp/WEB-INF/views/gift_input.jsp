@@ -32,7 +32,7 @@ margin-right:auto;
 			<td>*상품 종류</td><td><input type="text" name = "giftpart" placeholder="반팔,맨투맨등" required></td>
 			</tr>
 			<tr>
-			<td>썸네일 이미지</td><td><input type="text" name = "gifttumimg"></td>
+			<td>썸네일 이미지</td><td><input type="file" name = "gifttumimg"></td>
 			</tr>
 			<tr>
 			<td>*가격</td><td><input type="text" name = "giftprice" placeholder="숫자만 적으세요 ex)5000" required></td>
@@ -50,7 +50,7 @@ margin-right:auto;
 			<td>XL사이즈재고</td><td><input type="text" name = "giftstockxl" value = "0" placeholder="숫자만입력 가능합니다" pattern="[0-9]+"></td>
 			</tr>
 			<tr>
-			<td>설명 이미지 추가</td><td><input type="text" name = "giftimg"></td>
+			<td>설명 이미지 추가</td><td><input type="file" name = "giftimg"></td>
 			</tr>
 			<tr>
 			<td colspan="2" align="center"><input type="submit" class="btn btn-primary" value="등록하기"/></td>
