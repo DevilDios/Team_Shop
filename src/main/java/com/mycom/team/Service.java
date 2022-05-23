@@ -97,36 +97,36 @@ public interface Service {
 	
 	
    
-//100 영석 시작   
+//100 �쁺�꽍 �떆�옉   
 	public void insert(String id,String pw,String name,String tel,String email,String address);
    
    
-   public ArrayList<Gift_DTO> sanglist(); //상품리스트(기본 최신순)
+   public ArrayList<Gift_DTO> sanglist(); //�긽�뭹由ъ뒪�듃(湲곕낯 理쒖떊�닚)
    
    
    
    
-   public ArrayList<Gift_DTO> sanglistprice(String part); //상품리스트(가격높은순)
+   public ArrayList<Gift_DTO> sanglistprice(String part); //�긽�뭹由ъ뒪�듃(媛�寃⑸넂���닚)
    
    
-   public ArrayList<Gift_DTO> sangbestprice();//best 높은가격순
+   public ArrayList<Gift_DTO> sangbestprice();//best �넂��媛�寃⑹닚
    
-   public ArrayList<Gift_DTO> sangbestdprice();//best 낮은가격순
+   public ArrayList<Gift_DTO> sangbestdprice();//best �궙��媛�寃⑹닚
    
-   public ArrayList<Gift_DTO> sangbestreadcnt();//best 인기(조회)순
-   
-   
-   
-   public ArrayList<Gift_DTO> sanglistpricedown(String part); //상품리스트(가격낮은순)   
+   public ArrayList<Gift_DTO> sangbestreadcnt();//best �씤湲�(議고쉶)�닚
    
    
-   public ArrayList<Gift_DTO> sanglistreadcnt(String part); //상품리스트(인기조회순)  
+   
+   public ArrayList<Gift_DTO> sanglistpricedown(String part); //�긽�뭹由ъ뒪�듃(媛�寃⑸궙���닚)   
    
    
-   public ArrayList<Gift_DTO> sangdetail(int giftnum); //상품상세보기
+   public ArrayList<Gift_DTO> sanglistreadcnt(String part); //�긽�뭹由ъ뒪�듃(�씤湲곗“�쉶�닚)  
+   
+   
+   public ArrayList<Gift_DTO> sangdetail(int giftnum); //�긽�뭹�긽�꽭蹂닿린
   
    public ArrayList<Gift_DTO> partlist(String part); 
-   public void readcnt(int giftnum);//조회수   
+   public void readcnt(int giftnum);//議고쉶�닔   
    
    int cntNo();
 	public ArrayList<Gift_DTO> selectNo(PageVO vo);
@@ -196,8 +196,8 @@ public interface Service {
    
    
    
-//199 영석 끝   
-//200 민호 시작
+//199 �쁺�꽍 �걹   
+//200 誘쇳샇 �떆�옉
    
 	public Gift_DTO getGiftModify(int giftnum);
 	public void setGiftModify(int giftnum ,String gifttitle ,String giftpart ,String giftimg ,int giftprice,
@@ -296,8 +296,8 @@ public interface Service {
 	
 	
 	
-//299 민호 끝 
-//300 성욱 시작
+//299 誘쇳샇 �걹 
+//300 �꽦�슧 �떆�옉
 	public ArrayList<Member_DTO> getMemSelectAll();
 	public Member_DTO getMemModify(String id);
 	public void setMemModify(String id, String pw, String name, String tel, String email, String address);
@@ -308,7 +308,7 @@ public interface Service {
 	int cntNotice();
 	public ArrayList<Member_DTO> selectNotice(PageVO vo);
 	public void setGiftOrder(String id, int giftnum, String orderstatus, int orders, int orderm, int orderl);
-	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join 데이터 저장   
+	public ArrayList<Order_list_DTO> getOrderListDTO(String id); //join �뜲�씠�꽣 ���옣   
 	public void cartUserSet(String id, int giftnum, String giftstatus, int orders, int orderm, int orderl);
 	public ArrayList<Order_list_DTO> getCartListDTO(String id);
 	public void cartDelete(String id, int giftnum);
@@ -399,7 +399,7 @@ public interface Service {
    
    
    
-//399 성욱 끝
+//399 �꽦�슧 �걹
    
  
    

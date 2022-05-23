@@ -51,7 +51,7 @@ background: none;
    </div>
    </nav>
    
-   <c:forEach items="${viewAlla}" var="v">
+   <c:forEach items="${list}" var="v">
     <div class="col-lg-2 container-fluid" >
       <div class="thumbnail" style="border:none">
         <a href="sangdetail?giftnum=${v.giftnum}" target="_self" >

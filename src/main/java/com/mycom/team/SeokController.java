@@ -22,14 +22,14 @@ public class SeokController {
 	@Autowired
 	public SqlSession sqlSession;
 
-	//회원가입 폼
+	//�쉶�썝媛��엯 �뤌
 	@RequestMapping(value = "/memberinput")
 	public String memberinput()
 	{
 		return "member_input";
 	}
 	
-	//회원가입완료
+	//�쉶�썝媛��엯�셿猷�
 	@RequestMapping(value = "/membersave")
 	public String membersave(HttpServletRequest request,Model mo)
 	{
@@ -46,7 +46,7 @@ public class SeokController {
 		return "redirect:index";
 	}
 	
-	//상품자세히보기	
+	//�긽�뭹�옄�꽭�엳蹂닿린	
 	@RequestMapping(value="/sangdetail")
 	public String sdetail(HttpServletRequest request,Model mo) {
 		
@@ -58,7 +58,7 @@ public class SeokController {
 		return "sang_detail";
 	}
 	
-	//Best상품리스트
+	//Best�긽�뭹由ъ뒪�듃
 	@RequestMapping(value="/bestlist")
 	public String ko3(HttpServletRequest request, Model mo)
 	{  			
@@ -69,11 +69,9 @@ public class SeokController {
 		return "sang_list";	
 	}
 	
-	//part리스트
+	//part由ъ뒪�듃
 		@RequestMapping(value="/partlist")
-		public String ko33(HttpServletRequest request, Model model,PageVO vo
-				, @RequestParam(value="nowPage", required=false)String nowPage
-				, @RequestParam(value="cntPerPage", required=false)String cntPerPage) 
+		public String ko33(HttpServletRequest request, Model model) 
 		{  
 			ArrayList<Gift_DTO> list =null;
 			Service dao = sqlSession.getMapper(Service.class);
@@ -89,8 +87,8 @@ public class SeokController {
 			  list  = dao.partlist(part);
 			}
 			
-												
-			int total = dao.cntNo();//count 테이블 안에 전체 행 개수 반환
+			/*									
+			int total = dao.cntNo();//count �뀒�씠釉� �븞�뿉 �쟾泥� �뻾 媛쒖닔 諛섑솚
 			
 			if (nowPage == null && cntPerPage == null) {
 				nowPage = "1";
@@ -108,10 +106,17 @@ public class SeokController {
 			model.addAttribute("paginga", vo);
 			model.addAttribute("viewAlla", dao.selectNo(vo));
 			return "sang_list";	
+			
+			
+			*/
+			model.addAttribute("list", list);			
+			model.addAttribute("part",part);
+			
+			return "sang_list";	
 		}
 			
 		
-		//part높은가격순
+		//part�넂��媛�寃⑹닚
 		@RequestMapping(value="/sanglist_price")
 		public String ko4(HttpServletRequest request, Model mo)
 		{  	
@@ -132,7 +137,7 @@ public class SeokController {
 			return "sang_list";		
 		}
 		
-		//part낮은가격순
+		//part�궙��媛�寃⑹닚
 		@RequestMapping(value="/sanglist_dprice")
 		public String ko5(HttpServletRequest request,Model mo)		
 		{  	
@@ -152,9 +157,9 @@ public class SeokController {
 			mo.addAttribute("part",part);
 			return "sang_list";		
 		}
-		//part인기순(조회수)
+		//part�씤湲곗닚(議고쉶�닔)
 		@RequestMapping(value="/sang_readcnt")
-		public String ko6(HttpServletRequest request,Model mo)
+		public String ko6(HttpServletRequest request, Model mo) 
 		{  	
 			ArrayList<Gift_DTO> list = null;	
 		String part = request.getParameter("part");		
@@ -167,18 +172,21 @@ public class SeokController {
 		{
 			list = dao.sanglistreadcnt(part);
 		}
+			
 		mo.addAttribute("list", list);	
 		mo.addAttribute("part",part);
+		
 		return "sang_list";		
 		}
 
-    //조회수
+    //議고쉶�닔
 		public void readcnt(int giftnum)
 		{
 			Service dao = sqlSession.getMapper(Service.class);
 			dao.readcnt(giftnum);
 		}
-		// 상품 페이징
+		// �긽�뭹 �럹�씠吏�
+		/*
 		@RequestMapping("/sang_list")
 		public String noticeListt(PageVO vo, Model model
 				, @RequestParam(value="nowPage", required=false)String nowPage
@@ -187,7 +195,7 @@ public class SeokController {
 			
 			Service dao = sqlSession.getMapper(Service.class);	
 			ArrayList<Gift_DTO> list  = dao.sanglist();										
-			int total = dao.cntNo();//count 테이블 안에 전체 행 개수 반환
+			int total = dao.cntNo();//count �뀒�씠釉� �븞�뿉 �쟾泥� �뻾 媛쒖닔 諛섑솚
 			
 			if (nowPage == null && cntPerPage == null) {
 				nowPage = "1";
@@ -201,9 +209,8 @@ public class SeokController {
 			vo = new PageVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
 			model.addAttribute("paginga", vo);
 			model.addAttribute("viewAlla", dao.selectNo(vo));
-			
-			
-			return "sang_list";
+						
+			return "sang_list";			
 		}
-	
+	*/
 }

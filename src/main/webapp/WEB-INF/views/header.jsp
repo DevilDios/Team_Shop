@@ -53,8 +53,8 @@
   <ul class="nav navbar-nav">
 
   	<li><a href="index"><img src="${pageContext.request.contextPath}/image/logo.jpg"></a></li>
-            	<li><a href="sang_list?part=best"> Best </a></li>
-            	<li><a href="partlist?part=out"> Outer </a></li>
+            	<li><a href="partlist?part=best">Best</a></li>
+            	<li><a href="partlist?part=out">Outer</a></li>
                	<li><a href="partlist?part=top"> Top </a></li>
                	<li><a href="partlist?part=bottom"> Bottom </a></li>
                 <li><a href="#"> Dress </a></li>
