@@ -165,6 +165,10 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 	WHERE rn BETWEEN #{start} AND #{end}
 </select>
 
+<select id="ordero" resultType="com.mycom.team.Gift_DTO">
+  select * from gift where gifttitle = #{param1}
+</select>
+
 
 
 

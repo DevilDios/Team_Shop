@@ -59,7 +59,7 @@ alert("회원가입이 완료되었습니다.");
   <h4> 가입정보를 입력해주세요 </h4>
   <div class="row" style="text-align: center;" >
     
-  <input type="text" name="id" id="myid" class="form-control input-lg" placeholder="ID" />    
+  <input type="text" name="id" id="myid" class="form-control input-lg" placeholder="ID" required />    
   <br>
   <input type="password" name="pw" id="mypw" class="form-control input-lg" placeholder="PW" />
   <br>

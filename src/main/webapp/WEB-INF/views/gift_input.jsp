@@ -9,7 +9,6 @@ width: 400px;
 margin-left:auto; 
 margin-right:auto;
 }
-
 </style>
 <title>상품</title>
 </head>

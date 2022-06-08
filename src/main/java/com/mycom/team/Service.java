@@ -130,6 +130,10 @@ public interface Service {
    
    int cntNo();
 	public ArrayList<Gift_DTO> selectNo(PageVO vo);
+	
+	public ArrayList<Gift_DTO> ordero(String gifttitle);
+	
+	
    
    
    
