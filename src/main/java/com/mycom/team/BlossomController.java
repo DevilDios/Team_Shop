@@ -156,34 +156,7 @@ public class BlossomController {
 
 	
 	
-	//결제 페이지 결제하는곳
-	@RequestMapping(value = "/orderr",method = RequestMethod.GET)
-	public String order1(HttpServletRequest re,Model mo)
-	{
-		//Giftimg, gifttitle, orders, orderm, orderl, ordertotalprice
-		//데이터 전송해야함
-		//결제하기
-		Service dao = sqlSession.getMapper(Service.class);
 	
-		String gifttitle= re.getParameter("gifttitle");
-		int giftprice = Integer.parseInt(re.getParameter("giftprice"));
-		System.out.println("상품번호"+gifttitle);
-		//String giftsize = re.getParameter("giftsize");
-		int amount = Integer.parseInt(re.getParameter("amount"));
-		String giftsize = re.getParameter("giftsize");
-		int tot= amount*giftprice;
-		
-		String giftimg = re.getParameter("giftimg");
-	     
-		ArrayList<Gift_DTO> list = dao.ordero(gifttitle);
-		
-		mo.addAttribute("list", list);
-		mo.addAttribute("amount",amount);
-		mo.addAttribute("giftimg",giftimg);
-		mo.addAttribute("tot",tot);
-		mo.addAttribute("giftsize",giftsize);
-		return "order";
-	}	
 	
 	//결제 완료 처리
 	@RequestMapping(value = "/paid", method = RequestMethod.POST)
