@@ -19,10 +19,10 @@
 
 <p style="text-align: center;"> 
 BLOSSOM<br>
-상호명 : BLOSSOM대표: 노소현대표전화: 010-7225-8060팩스: 0504-347-2955<br>
-통신판매업 신고번호 : 제 2021-광주북구-1313 호사업자 등록번호: 518-16-01684 사업자 정보확인<br>
-소재지 : 광주 광역시 일곡택지로 63, 3층개인정보 처리 책임자: 김영선 (lissoms03@naver.com)Hosting by (주)BLOSSOM<br><br>
-Copyright(c) lissoms.co.kr. All Rights Reserved.<br>
+상호명 : BLOSSOM대표: 노소현대표전화: 123-4567-8900팩스: 1234-567-8900<br>
+통신판매업 신고번호 : 제 1234-서울시-1234 호사업자 등록번호: 123-45-67890 사업자 정보확인<br>
+소재지 : 서울 특별시 일이삼지로 63, 2층 개인정보 처리 책임자: 블로섬 (blossom@naver.com)Hosting by (주)BLOSSOM<br><br>
+Copyright(c) blossom***.co.kr All Rights Reserved.<br>
 
 <%-- naver map api --%>
 <%--
