@@ -116,20 +116,17 @@
 <!-- best상품리스트  낮은가격순 -->
 <select id="sangbestdprice" resultType="com.mycom.team.Gift_DTO">
  select * from gift order by giftprice asc
+ 
 </select>
 
 <!-- best상품리스트 인기(조회)순 -->
 <select id="sangbestreadcnt" resultType="com.mycom.team.Gift_DTO">
- select * from gift order by readcnt desc
+  select * from gift order by readcnt desc
 </select>
 
 <!-- part상품리스트 -->
 <select id="partlist" resultType="com.mycom.team.Gift_DTO">
-SELECT  * FROM (
-		select rownum rn, A.* from(  
-			select giftnum,giftimg,gifttitle,giftprice,giftpart from gift where giftpart = #{param1} ORDER BY giftnum DESC,giftprice asc)A)
-	WHERE rn BETWEEN #{start} AND #{end}
-  
+ select * from gift where giftpart = #{param1} order by giftnum desc
 </select>
 
 <!-- part리스트 높은가격순 -->
@@ -166,6 +163,10 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 		select rownum rn, A.* from(  
 			select giftnum,giftimg,gifttitle,giftprice from gift ORDER BY giftnum DESC,gifttitle asc)A)
 	WHERE rn BETWEEN #{start} AND #{end}
+</select>
+
+<select id="ordero" resultType="com.mycom.team.Gift_DTO">
+  select * from gift where gifttitle = #{param1}
 </select>
 
 
@@ -211,7 +212,7 @@ update gift set readcnt = readcnt +1 where giftnum = #{param1}
 <!--199 영석 끝-->
 <!--200 민호 시작-->
 	<select id="GiftInsert">
-		insert into gift values(giftnum_seq.NEXTVAL,#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10},#{param11})
+		insert into gift values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10},#{param11})
 	</select>
 
 	<delete id="GiftDelete">

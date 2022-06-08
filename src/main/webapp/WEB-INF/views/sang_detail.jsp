@@ -28,71 +28,17 @@ text-align-last:center;
 <title>Insert title here</title>
 </head>
 <h1 style="text-align: center;">상품상세</h1>
-<body onload="init();">
-  
+
+<body>
+
 <c:forEach items="${dlist}" var="d"> 
-  <!-- 수량추가 총금액   -->
- <script language="JavaScript" >
-var sell_price;
-
-
-function init () {
-   sell_price = document.form.sell_price.value;
-   document.form.sum.value = sell_price;
-   change();
-}
-
-function add () {
-	var hm;
-   hm = document.form.amount;
-   sum = document.form.sum;
-   hm.value ++ ;
-   sum.value = parseInt(hm.value) * parseInt(sell_price);
-}
-
-function del () {
-	var hm;
-   hm = document.form.amount;
-   sum = document.form.sum;
-      if (hm.value > 1) {
-         hm.value -- ;
-         sum.value = parseInt(hm.value) * parseInt(sell_price);
-      }
-}
-
-function change () {
-	var hm;
-   hm = document.form.amount;
-   sum = document.form.sum;
-
-      if (hm.value < 0) {
-         hm.value = 0;
-      }
-      parseInt(sum.value) = parseInt(hm.value) * parseInt(sell_price);
-} 
-
-
-function changeitem() {
-
-   var size = $("select[name = giftsize]").val(); 
-
-   alert(size+"사이즈 추가합니다");
-   
-   $("#appenditem").append("<li>"+size+
-		   ' size 수량 :'+
-		  ' <input type="text" name="amount" value="1" size="3" onchange="change();" style="border:none">'+
-		  ' <input type="button" value=" + " onclick="add();">&emsp;<input type="button" value=" - " onclick="del();"><br>'+"</li>");
-
-}
-
-</script  > 
 <div id="section3" class="container-fluid">
  <div class="container container-table" >
    <div class="col-xl-6" style="text-align: center;">
-   <form name="form" method="post" >
+   <form action="orderr" method="get" >
   <table class="table table-hover text-center" width="50%" align="center"  style="text-align: center;" >  
         
-      <tr> <td rowspan="9" style="text-align: center;"><img  src="${pageContext.request.contextPath}/image/${d.giftimg}" width="300" height="300">  </td></tr>
+      <tr> <td rowspan="9" style="text-align: center;"><img src="${pageContext.request.contextPath}/image/${d.giftimg}" width="300" height="300">  </td></tr>
         
        <tr><th>상품제목</th><td>${d.gifttitle}</td></tr>
        <tr><th>배송정보</th><td>대한통운</td></tr>
@@ -100,8 +46,9 @@ function changeitem() {
        <tr><th>판매가</th><td>${d.giftprice}원</td></tr>
        
        <tr><th>필수옵션</th><td style="text-align-last:center;">
-                             <ul style="text-align-last:center;" >
-                              <select class="form-control"  name="giftsize" onchange="changeitem()" style=" width:150px; text-align-list:center;" >
+                             <ul style="text-align-last:center; padding-left: 200px; " >
+                             
+                              <select class="form-control"  name="giftsize" style=" width:150px; text-align-list:center;"  >
 					          </ul>
 					    <option value="">사이즈선택</option>
 					    <option value="S">S / ${d.giftprice} 원</option>
@@ -110,31 +57,34 @@ function changeitem() {
 					     <option value="XL">XL / ${d.giftprice} 원</option>
 					    </select>
                                 </td></tr>
-                             
-         <tr><th>주문현황</th><td> <li id="appenditem"  >
-							
+                                   <tr><th>주문현황</th><td> <li>
+
+							수량 : <input type=hidden name="giftprice" value="${d.giftprice}">
+<input type="text" name="amount" value="1">
+
 							         </li>
 					         
          </td></tr>                        
-          <tr><th>총 합계금액</th>
+          <tr><th>
           <td>
-	       		<input type="hidden" name="sell_price" value="${d.giftprice}">	
-				총금액 : <input type="text" name="sum" size="4" readonly style="border:none"  >원<br>
+                   <input type="hidden" name="gifttitle" value="${d.gifttitle}">
+                   <input type="hidden" name="giftimg" value="${d.giftimg}">
+	       		<input type="hidden" name="giftprice" value="${d.giftprice}">	
+				
 				<br>
 				<p style="text-align: center;">
 				   <input type="button" value="장바구니" onclick="location.href='cart_userset'" class="btn btn-warning">
-                 <input type="submit" value="바로구매" onclick="location.href='order?gifttitle=${d.gifttitle}'" class="btn btn-danger">
-                 
+                 <button class="btn btn-danger" type="submit" > 구매하기 </button>         
+                       
                 </p>
 			
           </td></tr>      
  
        
   </table>
- 
- 
-<%-- #######################################################################################################################  --%>
-<div style=" padding-left:670px;">
+ </form>
+
+ <div style=" padding-left:670px;">
 	<script type="text/javascript" src="//pay.naver.com/customer/js/naverPayButton.js" charset="UTF-8"></script>
 	<script type="text/javascript">
 		function NPayBuy() {
@@ -173,11 +123,10 @@ function changeitem() {
 		});
 	</script>
 </div>																
-<%-- #######################################################################################################################  --%>
 
 
  
-		</form>
+		
   <br>
   <div style="text-align: center;">
   <input type="button" value="상품목록" onclick="location.href='bestlist'" class="btn btn-info">

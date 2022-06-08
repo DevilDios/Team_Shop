@@ -50,15 +50,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 	<c:set var="result" value="${param.result}"/>
 	<c:if test="${result=='loginfail'}">
 		<script type="text/javascript">
